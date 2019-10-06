@@ -1,0 +1,21 @@
+.questions {
+    background-color: purple;
+    height: 32vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    @include xs {
+        height: 145vw;
+    }
+}
+
+.questions--form {
+    background-color: lime;
+    height: 31vw;
+    width: 60vw;
+    @include xs {
+        height: 100%;
+        width: 100%;
+    }
+}

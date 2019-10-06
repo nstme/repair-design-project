@@ -1,0 +1,47 @@
+.container {
+  margin: auto 0;
+  max-width: $max-width;
+}
+
+.header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex: 1;
+        height: 5.76vw;
+        background-color: $bg-color-dark;
+        text-transform: uppercase;
+        color: $font-beige;
+        font-family: 'Futura Book Regular';
+        
+        @include xs {
+            height: 15vw;
+        }
+}
+
+.header_h1{
+    margin: 0;
+    font-size: 14px;
+}
+
+.header-menu {
+    display: flex;
+    list-style: none;
+    
+    @include xs {
+        display: none;
+    }
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: $font-white;
+    padding: 0 1vw;
+}
+
+.request-call {
+    @include xs {
+        display: none;
+    }
+}

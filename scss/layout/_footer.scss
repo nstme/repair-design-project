@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    height: 9.76vw;
+    background-color: $bg-color-dark;
+    text-transform: uppercase;
+    color: $font-beige;
+    font-family: 'Futura Book Regular';
+    @include xs {
+        display: none;
+    }
+}
+
+.footer_h1{
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-nav--menu {
+    display: flex;
+    list-style: none;
+}
+
+.footer-nav--menu--link {
+    text-decoration: none;
+    color: $font-white;
+    padding: 0 1vw;
+}

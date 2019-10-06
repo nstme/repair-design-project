@@ -1,0 +1,49 @@
+
+.clients {
+    background-color: lightyellow;
+    height: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;  
+    @include xs {
+        display: none;
+    }
+}
+
+.clients--header {
+    color: white;
+    background-color: pink;
+    width: 14vw;    
+    height: 7vw;
+}
+
+.clients--info {
+    color: white;
+    background-color: rgb(8, 59, 155);
+    width: 32vw;
+    height: 6vw;
+}
+
+.clients--cols{
+    background-color: white;
+    width: 86vw;
+    height: 35vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients--cols--one {
+    flex: 1;
+    background-color: orange;
+}
+
+.clients--cols--two{
+    flex: 1;
+    background-color: greenyellow;
+}
+
+.clients--cols--three {
+    flex: 1;
+    background-color: rgb(96, 32, 148);
+}

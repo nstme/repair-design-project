@@ -1,0 +1,154 @@
+.types-repair--levels {
+    background-color: lightyellow;
+    height: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;    
+    @include xs {
+        height: 470vw;
+    }
+}
+
+//types-repair--levels--header
+
+.types-repair--levels--header {
+    color: white;
+    background-color: pink;
+    width: 14vw;
+    height: 9vw;
+    margin-top: 2vw;
+    @include xs {
+        width: 100%;
+        margin: 0;
+        height: 45vw;
+    }
+}
+
+.types-repair--levels--cols{
+    background-color: white;
+    width: 86vw;
+    height: 42vw;
+    display: flex;
+    justify-content: space-between;
+    @include xs {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+.types-repair--levels--cols--redecorating {
+    flex: 0.8;
+    background-color: orange;
+}
+
+.types-repair--levels--cols--overhaul{
+    flex: 0.8;
+    background-color: greenyellow;
+}
+
+.types-repair--levels--cols--designer-repair {
+    flex: 0.8;
+    background-color: rgb(96, 32, 148);
+}
+
+// types-repair--measure
+
+.types-repair--measure {
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 69vw;
+    @include xs {
+            display: none;
+    }
+}
+
+.types-repair--measure--cirles {
+    background-color: white;
+    height: 50vw;
+    flex: 1.36;
+}
+
+.types-repair--measure--form {
+    background-color: yellow;
+    height: 59vw;
+    flex: 1;
+}
+
+// types-repair--fantasies
+
+.types-repair--fantasies {
+    display: flex;
+    flex-wrap: row;
+    height: 60vw;
+    background: url('/assets/images/fantasy-bg.png') no-repeat;
+
+    @include xs {
+            background: none;
+            height: 100vw;
+            display: flex;
+            flex-direction: column;
+    }
+}
+
+.types-repair--fantasies--left {
+    flex: 1;
+    @include xs {
+            flex: none;
+    }
+}
+
+.types-repair--fantasies--header {
+    background-color: white;
+    width: 15vw;
+    margin-left: 7vw;
+     @include xs {
+        margin: 0;
+        width: 100%;
+        height: 32vw;
+    }
+}
+
+.types-repair--fantasies--list {
+    background-color: pink;
+    width: 15vw;
+    margin-left: 7vw;
+    @include xs {
+            display: none;
+    }
+}
+
+
+.types-repair--fantasies--img {
+    flex: 1.45;
+    background-color: yellow;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.types-repair--fantasies--img img:first-child {
+    margin-top: -3vw;
+    @include xs {
+            display: none;
+    }
+}
+
+.types-repair--fantasies--img img:nth-child(2) {
+    margin-top: 2.5vw;
+    @include xs {
+            display: none;
+    }
+}
+
+.types-repair--fantasies--img--right {
+    margin-left: -4vw;
+    margin-top: -5vw;
+    @include xs {
+            display: none;
+    }
+}

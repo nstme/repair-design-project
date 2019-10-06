@@ -1,0 +1,62 @@
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 52.431vw;
+    background-color: pink;
+
+    @include xs {
+            height: 126vw;
+    }
+
+}
+
+.instagram {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    transform: rotate(90deg);
+    width: 56vw;
+    margin-left: -23.6vw;
+    margin-right: -23.7vw;
+
+    @include xs {
+            display: none;
+    }
+    
+}
+
+.instagram p {
+    margin: 0;
+    line-height: 5.7vw;
+}
+
+.turn-key {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: green;
+    margin-bottom: 3.3vw;
+    width: 100%;
+    height: 49.1vw;
+    
+    @include xs {
+        margin: 0;
+        height: 100%;
+    }
+}
+
+
+.btn-scroll {
+    position: absolute;
+    background-color: yellow;
+    margin-left: -5.6vw;
+    margin-top: 3.3vw;
+    width: 17vw;
+    height: 7vw;
+    z-index: 10;
+    @include xs {
+            display: none;
+    }
+}

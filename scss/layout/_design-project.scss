@@ -1,0 +1,138 @@
+.design-project {
+    height: 125vw;
+    background-color: green;
+     @include xs {
+        height: 480vw;
+    }
+}
+
+// design-project--levels
+
+.design-project--levels {
+    background-color: lightyellow;
+    height: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;   
+    padding-top: 6vw;
+    @include xs {
+        height: 100%;
+        padding: 0;
+    }
+    
+}
+
+.design-project--levels--header {
+    color: white;
+    background-color: pink;
+    width: 14vw;
+    height: 7vw;
+    margin-top: 3vw;
+    @include xs {
+        margin: 0;
+        width: 100%;
+        height: 36vw;;
+    }
+}
+
+.design-project--levels--info {
+    color: white;
+    background-color: rgb(8, 59, 155);
+    width: 47vw;
+    height: 7.5vw;
+    @include xs {
+        width: 100%;
+        height: 37vw;
+    }
+}
+
+.design-project--levels--cols{
+    background-color: white;
+    width: 86vw;
+    height: 42vw;
+    display: flex;
+    justify-content: space-between;
+    @include xs {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.design-project--levels--cols--mini {
+    flex: 0.8;
+    background-color: orange;
+}
+
+.design-project--levels--cols--standard{
+    flex: 0.8;
+    background-color: greenyellow;
+}
+
+.design-project--levels--cols--full {
+    flex: 0.8;
+    background-color: rgb(96, 32, 148);
+}
+
+// design-project-steps
+
+.design-project--steps {
+    background-color: teal;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 59.25vw;
+    @include xs {
+        display: none;
+    }
+}
+
+.design-project--steps--info {
+    margin-left: 6vw;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.design-project--steps--info--intro {
+    margin-top: 5vw;
+    background-color: red;
+    height: 10vw;
+    width: 24vw;
+}
+
+.design-project--steps--info--details {
+    background-color: purple;
+    height: 23vw;
+    width: 28vw;
+    margin-top: 4vw;
+}
+
+.design-project--steps--info--slider {
+    background-color: yellow;
+    height: 4vw;
+    width: 22vw;
+    margin-top: 3vw;
+}
+
+.design-project--steps--numbers{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    background-color: blue;
+    height: 100%;
+}
+
+.design-project--steps--numbers--list {
+    background-color: yellow;
+    height: 18vw;
+    margin-top: 9vw;
+}
+
+.design-project--steps--numbers--img {
+    background-color: green;
+    height: 34vw;
+}
