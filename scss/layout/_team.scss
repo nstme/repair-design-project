@@ -1,72 +1,328 @@
-
 .team {
-    background-color: lightyellow;
+    background: linear-gradient(180deg, $bg-color-dark 46.5%, $color-white 0%);
     height: 65vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;  
+    
     @include xs {
         height: 450vw;
+        background: $bg-color-dark;
     }
-}
 
-.team--header {
-    color: white;
-    background-color: pink;
-    width: 14vw;
-    height: 7vw;
-    @include xs {
-        width: 100%;
-        height: 28vw;
+    &--header {
+        color: $color-white;
+        width: 8vw;
+        height: 7vw;
+        padding-top: 1vw;
+        @include xs {
+            width: 100%;
+            height: 31vw;
+            display: flex;
+            flex-direction: column;
+            padding-top: 3vw;
+        }
+
+        & h2 {
+            font-family: 'Yeseva One', serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $color-white;
+            text-align: center;
+            @include xs {
+                font-size: 22px;
+            }
+        }
     }
-}
 
-.team--info {
-    color: white;
-    background-color: rgb(8, 59, 155);
-    width: 32vw;
-    height: 6vw;
-    @include xs {
-        width: 100%;
-        height: 20vw;
+    &--info {
+        width: 32vw;
+        height: 6vw;
+        padding-top: 0.5vw;
+        font-family: 'FuturaBookC', sans-serif;
+        font-size: 20px;
+        text-align: center;
+        color: $color-white;
+
+        @include xs {
+            width: 90vw;
+            height: 20vw;
+            font-size: 15px;
+            padding-top: 2vw;
+        }
     }
-}
 
-.team--cols{
-    background-color: white;
-    width: 77vw;
-    height: 35vw;
-    display: flex;
-    justify-content: space-between;
-    @include xs {
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
+    &--cols{
+        width: 77vw;
+        height: 35vw;
+        display: flex;
+        justify-content: space-between;
+        @include xs {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        &--dmitry {
+            flex: 1;
+
+            & .img-dm {
+                position: relative;
+                margin: 3vw;
+                height: 24.8vw;
+                width: 18.9vw;
+                background-image: url('/assets/images/dmitry.jpg');
+                background-repeat: no-repeat;
+                
+                @include xs {
+                    height: 96vw;
+                    width: 73vw;
+                    margin: 14vw 16vw 0;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -14%;
+                    left: -21%;
+                    height: 7vw;
+                    width: 7vw;
+                    background-image: url('/assets/images/dmitry-icon.svg');
+                    background-repeat: no-repeat;
+                    @include xs {
+                        top: -14%;
+                        left: -23%;
+                        height: 22vw;
+                        width: 24vw;
+                    }
+                }
+            }
+
+            & .title {
+                position: relative;
+                height: 6.5vw;
+                width: 16.2vw;
+                box-sizing: border-box;
+                margin-top: -8.8vw;
+                margin-left: 4.2vw;
+                padding-top: 0.5vw;
+                text-align: center;
+                vertical-align: center;
+                background-color: $color-white;
+                font-family: 'Yeseva One', serif;
+                font-size: 18px;
+                color: $bg-color-dark;
+                
+                @include xs {
+                    height: 25vw;
+                    margin: -22vw 22vw 20vw;
+                    padding: -1vw;
+                    width: 62vw;
+                }
+                
+                & p:last-child {
+                    font-family: 'FuturaBookC', sans-serif;
+                    color: #959595;
+                }
+
+            }
+
+            & .btn-experience {
+                line-height: 3.3vw;
+                width: 16.1vw;
+                margin-left: 4.2vw;
+                text-align: center;
+                @include xs {
+                    width: 61.5vw;
+                    line-height: 11vw;
+                    margin: -20vw 22vw;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        &--larisa{
+            flex: 1;
+
+            & .img-dm {
+                position: relative;
+                margin: 3vw;
+                height: 24.8vw;
+                width: 18.9vw;
+                background-image: url('/assets/images/larisa.jpg');
+                background-repeat: no-repeat;
+                
+                @include xs {
+                    height: 96vw;
+                    width: 73vw;
+                    margin: 14vw 16vw 0;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -14%;
+                    left: -21%;
+                    height: 7vw;
+                    width: 7vw;
+                    background-image: url('/assets/images/larisa-icon.svg');
+                    background-repeat: no-repeat;
+                    @include xs {
+                        top: -14%;
+                        left: -23%;
+                        height: 22vw;
+                        width: 24vw;
+                    }
+                }
+            }
+
+            & .title {
+                position: relative;
+                height: 6.5vw;
+                width: 16.2vw;
+                box-sizing: border-box;
+                margin-top: -8.8vw;
+                margin-left: 4.2vw;
+                padding-top: 0.5vw;
+                text-align: center;
+                vertical-align: center;
+                background-color: $color-white;
+                font-family: 'Yeseva One', serif;
+                font-size: 18px;
+                color: $bg-color-dark;
+                @include xs {
+                    height: 25vw;
+                    margin: -22vw 22vw 20vw;
+                    padding: -1vw;
+                    width: 62vw;
+                }
+                
+                & p:last-child {
+                    font-family: 'FuturaBookC', sans-serif;
+                    color: #959595;
+                }
+
+            }
+
+            & .btn-experience {
+                line-height: 3.3vw;
+                width: 16.1vw;
+                margin-left: 4.2vw;
+                text-align: center;
+                @include xs {
+                    width: 61.5vw;
+                    line-height: 11vw;
+                    margin: -20vw 22vw;
+                    font-size: 13px;
+                }
+            }
+
+        }
+
+        &--alexey {
+            flex: 1;
+
+            & .img-dm {
+                position: relative;
+                margin: 3vw;
+                height: 24.8vw;
+                width: 18.9vw;
+                background-image: url('/assets/images/alexey.jpg');
+                background-repeat: no-repeat;
+                
+                @include xs {
+                    height: 96vw;
+                    width: 73vw;
+                    margin: 14vw 16vw 0;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -14%;
+                    left: -21%;
+                    height: 7vw;
+                    width: 7vw;
+                    background-image: url('/assets/images/alexey-icon.svg');
+                    background-repeat: no-repeat;
+                    @include xs {
+                        top: -14%;
+                        left: -23%;
+                        height: 22vw;
+                        width: 24vw;
+                    }
+                }
+            }
+
+            & .title {
+                position: relative;
+                height: 6.5vw;
+                width: 16.2vw;
+                box-sizing: border-box;
+                margin-top: -8.8vw;
+                margin-left: 4.2vw;
+                padding-top: 0.5vw;
+                text-align: center;
+                vertical-align: center;
+                background-color: $color-white;
+                font-family: 'Yeseva One', serif;
+                font-size: 18px;
+                color: $bg-color-dark;
+                
+                @include xs {
+                    height: 25vw;
+                    margin: -22vw 22vw 20vw;
+                    width: 62vw;
+                }
+                
+                & p:last-child {
+                    font-family: 'FuturaBookC', sans-serif;
+                    color: #959595;
+                }
+
+            }
+
+            & .btn-experience {
+                line-height: 3.3vw;
+                width: 16.1vw;
+                margin-left: 4.2vw;
+                text-align: center;
+                
+                @include xs {
+                    width: 61.5vw;
+                    line-height: 11vw;
+                    margin: -20vw 22vw;
+                    font-size: 13px;
+                }
+            }
+        }
     }
-}
 
-.team--cols--dmitry {
-    flex: 1;
-    background-color: orange;
-}
+    &--info2 {
+        position: relative;
+        width: 39vw;
+        height: 13vw;
+        
+        @include xs {
+            display: none;
+        }
 
-.team--cols--larisa{
-    flex: 1;
-    background-color: greenyellow;
-}
+        &::before {
+            content: '';
+            position: absolute;
+            top: 3%;
+            left: 45%;
+            width: 4vw;
+            border-bottom: 2px solid $color-beige;
+        }
 
-.team--cols--alexey {
-    flex: 1;
-    background-color: rgb(96, 32, 148);
-}
-
-.team--info2 {
-    color: white;
-    background-color: rgb(8, 59, 155);
-    width: 40vw;
-    height: 13vw;
-    @include xs {
-        display: none;
+        & p {
+            font-family: 'FuturaBookC', sans-serif;
+            font-size: 20px;
+            line-height: 2vw;
+            text-align: center;
+            color: $bg-color-dark;  
+        }
     }
 }

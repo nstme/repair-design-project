@@ -7,53 +7,90 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  padding: 0 6vw 0 5vw;
   height: 5.76vw;
   background-color: #131313;
+  color: #e3b873;
+  font-family: 'FuturaDemiC', sans-serif;
   text-transform: uppercase;
-  color: #E3B873;
-  font-family: 'Futura Book Regular';
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .header {
     height: 15vw;
   }
 }
 
-.header_h1 {
+.header--h1 {
   margin: 0;
   font-size: 14px;
 }
 
-.header-menu {
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .header--h1 {
+    font-size: 12px;
+  }
+}
+
+.header--menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 14px;
 }
 
-@media screen and (max-width: 375px) {
-  .header-menu {
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .header--menu {
     display: none;
   }
 }
 
-.nav-link {
+.header--menu li:first-child a {
+  color: #e3b873;
+}
+
+.header--menu .nav-link {
   text-decoration: none;
   color: #fff;
   padding: 0 1vw;
 }
 
-@media screen and (max-width: 375px) {
-  .request-call {
+.header--menu .nav-link:hover {
+  color: #e3b873;
+}
+
+.header--phone {
+  color: #e3b873;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .header--phone {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.header .request-call {
+  width: 161px;
+  height: 37px;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: center;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .header .request-call {
     display: none;
   }
 }
@@ -70,10 +107,10 @@
       -ms-flex-align: center;
           align-items: center;
   height: 52.431vw;
-  background-color: pink;
+  background-color: #131313;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .banner {
     height: 126vw;
   }
@@ -92,17 +129,33 @@
   width: 56vw;
   margin-left: -23.6vw;
   margin-right: -23.7vw;
+  background-color: #131313;
 }
 
-@media screen and (max-width: 375px) {
+.instagram a {
+  margin: 0;
+  line-height: 5.7vw;
+  color: #e3b873;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'FuturaDemiC', sans-serif;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .instagram {
     display: none;
   }
 }
 
-.instagram p {
-  margin: 0;
-  line-height: 5.7vw;
+.instagram::after {
+  position: absolute;
+  top: 2.5vw;
+  left: 31vw;
+  content: '';
+  height: 2px;
+  width: 51px;
+  border-bottom: 1.5px solid #e3b873;
 }
 
 .turn-key {
@@ -115,37 +168,164 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background-color: green;
+  background: url("/assets/images/banner-bg.jpg") no-repeat;
   margin-bottom: 3.3vw;
   width: 100%;
   height: 49.1vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .turn-key {
     margin: 0;
     height: 100%;
   }
 }
 
+.turn-key--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 49vw;
+  padding-left: 4vw;
+  color: #fff;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .turn-key--info {
+    height: 100%;
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.turn-key--info p:first-child {
+  max-width: 36vw;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', serif;
+  font-size: 40px;
+  line-height: 4vw;
+  margin: 0;
+  margin-top: -2vw;
+}
+
+.turn-key--info p:first-child span {
+  color: #e3b873;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .turn-key--info p:first-child {
+    font-size: 23px;
+    max-width: 80vw;
+    margin-top: 24vw;
+    line-height: 7vw;
+  }
+}
+
+.turn-key--info p {
+  max-width: 29vw;
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 0;
+  margin-top: 1vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .turn-key--info p {
+    font-size: 18px;
+    max-width: 80vw;
+    margin-top: 3vw;
+    line-height: 7vw;
+  }
+}
+
+.turn-key--info .button-calc-cost,
+.turn-key--info .button-application {
+  width: 14vw;
+  height: 3.5vw;
+  text-transform: uppercase;
+  font-family: 'FuturaDemiC', sans-serif;
+  font-size: 13px;
+  margin-right: 1vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .turn-key--info .button-calc-cost,
+  .turn-key--info .button-application {
+    width: 91vw;
+    height: 14vw;
+    margin-bottom: 7vw;
+  }
+}
+
+.turn-key--buttons {
+  margin-top: 3vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .turn-key--buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 8vw;
+  }
+}
+
 .btn-scroll {
   position: absolute;
-  background-color: yellow;
+  background-color: #131313;
   margin-left: -5.6vw;
   margin-top: 3.3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 17vw;
   height: 7vw;
   z-index: 10;
 }
 
-@media screen and (max-width: 375px) {
+.btn-scroll p {
+  padding-right: 1vw;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+.btn-scroll p:hover {
+  color: #e3b873;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .btn-scroll {
     display: none;
   }
 }
 
 .completed-projects {
-  background-color: teal;
+  background-color: #131313;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +342,7 @@
   height: 46.25vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .completed-projects {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -193,7 +373,7 @@
   height: 100%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .completed-projects--info {
     margin: 0;
   }
@@ -201,24 +381,96 @@
 
 .completed-projects--info--intro {
   margin-top: 5vw;
-  background-color: red;
   height: 15vw;
   width: 32vw;
 }
 
-@media screen and (max-width: 375px) {
+.completed-projects--info--intro--header {
+  position: relative;
+  max-width: 20vw;
+  color: #e3b873;
+  text-transform: uppercase;
+  font-family: 'Yeseva One';
+  font-size: 27px;
+  line-height: 34px;
+  padding-left: 1vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--info--intro--header {
+    font-size: 22px;
+    max-width: 37vw;
+    padding: 0;
+    text-align: center;
+    margin-top: 9vw;
+    margin-bottom: 2vw;
+  }
+}
+
+.completed-projects--info--intro--header::after {
+  position: absolute;
+  top: 3.5vw;
+  left: 12vw;
+  content: '';
+  height: 1px;
+  width: 6.5vw;
+  border-bottom: 2px solid #e3b873;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--info--intro--header::after {
+    display: none;
+  }
+}
+
+.completed-projects--info--intro p {
+  color: #fff;
+  font-family: 'FuturaBookC';
+  font-size: 18px;
+  line-height: 30px;
+  padding-left: 1vw;
+  width: 30vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--info--intro p {
+    font-size: 14px;
+    width: 91vw;
+    line-height: 6vw;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .completed-projects--info--intro {
     margin: 0;
     width: 100%;
     height: 67vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .completed-projects--info--details {
-  background-color: purple;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding-left: 1vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .completed-projects--info--details {
     margin: 0;
     width: 100%;
@@ -226,13 +478,70 @@
   }
 }
 
+.completed-projects--info--details--item p {
+  margin: 0;
+}
+
+.completed-projects--info--details--item p:first-child {
+  color: #e3b873;
+  font-family: 'Yeseva One';
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 3vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--info--details--item p:first-child {
+    font-size: 14px;
+    line-height: 12vw;
+  }
+}
+
+.completed-projects--info--details--item p:last-child {
+  color: #fff;
+  font-family: 'FuturaBookC';
+  font-size: 15px;
+  line-height: 1vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--info--details--item p:last-child {
+    width: 24vw;
+    font-size: 14px;
+    line-height: 5vw;
+  }
+}
+
 .completed-projects--info--slider {
-  background-color: yellow;
   height: 4vw;
   width: 20vw;
 }
 
-@media screen and (max-width: 375px) {
+.completed-projects--info--slider .arrow-left,
+.completed-projects--info--slider .arrow-right {
+  color: white;
+  font-size: 30px;
+}
+
+.completed-projects--info--slider .arrow-left:hover,
+.completed-projects--info--slider .arrow-right:hover {
+  color: #e3b873;
+}
+
+.completed-projects--info--slider .bullet {
+  display: inline-block;
+  margin: 0 0.7vw 0.1vw 0.7vw;
+  height: 0.7vw;
+  width: 0.7vw;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.completed-projects--info--slider .bullet:nth-child(2), .completed-projects--info--slider .bullet:hover {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .completed-projects--info--slider {
     display: none;
   }
@@ -249,11 +558,10 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  background-color: blue;
   height: 100%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .completed-projects--apts {
     height: 50vw;
     width: 100%;
@@ -261,29 +569,124 @@
 }
 
 .completed-projects--apts--h {
-  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 9vw;
 }
 
-@media screen and (max-width: 375px) {
+.completed-projects--apts--h a {
+  margin: 1.5vw 2vw 0 3vw;
+  padding-bottom: 0.3vw;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Yeseva One';
+  font-size: 14px;
+}
+
+.completed-projects--apts--h a:first-child, .completed-projects--apts--h a:hover {
+  color: #e3b873;
+  border-bottom: 2px solid #e3b873;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .completed-projects--apts--h {
     display: none;
   }
 }
 
 .completed-projects--apts--img {
-  background-color: green;
+  position: relative;
   height: 34vw;
+  width: 62vw;
+  max-width: 892px;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .completed-projects--apts--img {
     height: 100%;
+    overflow: visible;
+  }
+}
+
+.completed-projects--apts--img .apt1 {
+  position: absolute;
+  left: 3vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--apts--img .apt1 {
+    display: none;
+  }
+}
+
+.completed-projects--apts--img .apt2 {
+  position: absolute;
+  left: 52vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--apts--img .apt2 {
+    position: absolute;
+    left: 5vw;
+    height: 107%;
+    top: -7vw;
+  }
+}
+
+.completed-projects--apts--img .btn-right {
+  position: absolute;
+  z-index: 10;
+  top: 42%;
+  right: 5%;
+  width: 3.8vw;
+  height: 3.8vw;
+  border-radius: 50%;
+  background-color: #e3b873;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--apts--img .btn-right {
+    width: 10vw;
+    height: 10vw;
+    top: 39%;
+    left: 130%;
+  }
+}
+
+.completed-projects--apts--img .btn-right:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.completed-projects--apts--img .btn-right .next {
+  position: absolute;
+  left: 28%;
+  top: 35%;
+  width: 1vw;
+  height: 1vw;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .completed-projects--apts--img .btn-right .next {
+    width: 2vw;
+    height: 2vw;
   }
 }
 
 .online-control {
-  background-color: gray;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(33.3%, #131313), color-stop(0%, #fff));
+  background: linear-gradient(180deg, #131313 33.3%, #fff 0%);
   height: 75vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,47 +703,132 @@
           align-items: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .online-control {
     height: 228vw;
+    background: #131313;
   }
 }
 
-.online-control--header {
-  color: white;
-  background-color: pink;
-}
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .online-control--header {
     margin: 0;
     width: 100%;
     height: 30vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
+}
+
+.online-control--header h2 {
+  position: relative;
+  margin: 2.5vw 0 1vw 0;
+  font-family: 'Yeseva One', serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--header h2 {
+    font-size: 22px;
+    margin-top: 1vw;
+    margin-bottom: 5vw;
+  }
+}
+
+.online-control--header .camera-icon {
+  margin-left: 2.2vw;
 }
 
 .online-control--video {
   width: 56.7vw;
   height: 30.14vw;
-  margin-top: 1.4vw;
+  margin-top: 1.9vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .online-control--video {
     margin: 0;
     width: 100%;
+    width: 90vw;
     height: 57.14vw;
   }
 }
 
 .online-control--info {
-  background-color: green;
-  width: 50vw;
+  position: relative;
+  width: 51vw;
   height: 15vw;
   margin-top: 3vw;
+  padding: 2vw 2vw 0vw 2vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.online-control--info p {
+  text-align: center;
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 20px;
+  line-height: 34px;
+  color: #131313;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--info p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 7vw;
+    margin: 9vw 3vw;
+    color: #fff;
+  }
+}
+
+.online-control--info p::before {
+  content: '';
+  position: absolute;
+  left: 46%;
+  top: 9%;
+  display: block;
+  width: 4vw;
+  border-top: 1.5px solid #e3b873;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--info p::before {
+    width: 15vw;
+    left: 42%;
+    top: 12%;
+  }
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .online-control--info {
     margin: 0;
     width: 100%;
@@ -349,9 +837,8 @@
 }
 
 .online-control--form {
-  background-color: yellow;
   width: 54vw;
-  height: 9vw;
+  height: 14vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,10 +852,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 4vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .online-control--form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -383,8 +869,173 @@
   }
 }
 
+.online-control--form--details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10fr 10fr 9fr;
+      grid-template-columns: 10fr 10fr 9fr;
+  width: 100%;
+  grid-gap: 3.5vw;
+  margin-top: 2vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form--details {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 15vw 0;
+  }
+}
+
+.online-control--form--details .your-name-cl,
+.online-control--form--details .your-phone-cl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'FuturaBookC', sans-serif;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form--details .your-name-cl,
+  .online-control--form--details .your-phone-cl {
+    padding: 0 4vw;
+  }
+}
+
+.online-control--form--details .your-name-cl label,
+.online-control--form--details .your-phone-cl label {
+  font-size: 15px;
+  color: rgba(19, 19, 19, 0.5);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form--details .your-name-cl label,
+  .online-control--form--details .your-phone-cl label {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.online-control--form--details .your-name-cl input,
+.online-control--form--details .your-phone-cl input {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(19, 19, 19, 0.5);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form--details .your-name-cl input,
+  .online-control--form--details .your-phone-cl input {
+    color: white;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.online-control--form--details .your-name-cl input::-webkit-input-placeholder,
+.online-control--form--details .your-phone-cl input::-webkit-input-placeholder {
+  font-size: 18px;
+  color: #131313;
+}
+
+.online-control--form--details .your-name-cl input:-ms-input-placeholder,
+.online-control--form--details .your-phone-cl input:-ms-input-placeholder {
+  font-size: 18px;
+  color: #131313;
+}
+
+.online-control--form--details .your-name-cl input::-ms-input-placeholder,
+.online-control--form--details .your-phone-cl input::-ms-input-placeholder {
+  font-size: 18px;
+  color: #131313;
+}
+
+.online-control--form--details .your-name-cl input::placeholder,
+.online-control--form--details .your-phone-cl input::placeholder {
+  font-size: 18px;
+  color: #131313;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form--details .your-name-cl input::-webkit-input-placeholder,
+  .online-control--form--details .your-phone-cl input::-webkit-input-placeholder {
+    color: #fff;
+  }
+  .online-control--form--details .your-name-cl input:-ms-input-placeholder,
+  .online-control--form--details .your-phone-cl input:-ms-input-placeholder {
+    color: #fff;
+  }
+  .online-control--form--details .your-name-cl input::-ms-input-placeholder,
+  .online-control--form--details .your-phone-cl input::-ms-input-placeholder {
+    color: #fff;
+  }
+  .online-control--form--details .your-name-cl input::placeholder,
+  .online-control--form--details .your-phone-cl input::placeholder {
+    color: #fff;
+  }
+}
+
+.online-control--form--details .your-phone-cl input::-webkit-input-placeholder {
+  color: #131313;
+}
+
+.online-control--form--details .your-phone-cl input:-ms-input-placeholder {
+  color: #131313;
+}
+
+.online-control--form--details .your-phone-cl input::-ms-input-placeholder {
+  color: #131313;
+}
+
+.online-control--form--details .your-phone-cl input::placeholder {
+  color: #131313;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form--details .your-phone-cl input::-webkit-input-placeholder {
+    color: #fff;
+  }
+  .online-control--form--details .your-phone-cl input:-ms-input-placeholder {
+    color: #fff;
+  }
+  .online-control--form--details .your-phone-cl input::-ms-input-placeholder {
+    color: #fff;
+  }
+  .online-control--form--details .your-phone-cl input::placeholder {
+    color: #fff;
+  }
+}
+
+.online-control--form--tos label {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form--tos label {
+    margin-top: 4vw;
+  }
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form--tos label {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .online-control--form .btn-submit {
+    width: 91vw;
+    line-height: 13vw;
+    margin: 0 auto;
+  }
+}
+
 .types-repair--levels {
-  background-color: lightyellow;
   height: 60vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,25 +1052,49 @@
           align-items: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--levels {
     height: 470vw;
   }
 }
 
 .types-repair--levels--header {
-  color: white;
-  background-color: pink;
   width: 14vw;
   height: 9vw;
   margin-top: 2vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--levels--header {
-    width: 100%;
-    margin: 0;
-    height: 45vw;
+    width: 54%;
+    margin: 14vw auto;
+    height: 17vw;
+  }
+}
+
+.types-repair--levels--header h2 {
+  position: relative;
+  margin: 2vw 0 1vw 1vw;
+  font-family: 'Yeseva One', serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #131313;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--header h2 {
+    font-size: 22px;
+  }
+}
+
+.types-repair--levels--header .tools-icon {
+  margin-left: 2.9vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--header .tools-icon {
+    margin-left: 11vw;
+    margin-top: 3vw;
   }
 }
 
@@ -435,7 +1110,7 @@
           justify-content: space-between;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--levels--cols {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -445,29 +1120,253 @@
   }
 }
 
+.types-repair--levels--cols .button-cost {
+  position: absolute;
+  left: 9%;
+  bottom: 0%;
+  width: 15.8vw;
+  height: 3.75vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  line-height: 3.75vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols .button-cost {
+    width: 50vw;
+    height: 10vw;
+    font-size: 15px;
+    line-height: 10vw;
+    left: -3%;
+    top: 122%;
+  }
+}
+
 .types-repair--levels--cols--redecorating {
-  -webkit-box-flex: 0.8;
-      -ms-flex: 0.8;
-          flex: 0.8;
-  background-color: orange;
+  position: relative;
+}
+
+.types-repair--levels--cols--redecorating .bg-img {
+  display: block;
+  max-width: 392px;
+  max-height: 421px;
+  width: 27.2vw;
+  height: 30vw;
+  background-image: url(/assets/images/redecorating.jpg);
+  background-repeat: no-repeat;
+  background-size: 52vw;
+  background-position: 49% 4%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--redecorating .bg-img {
+    width: 89vw;
+    height: 97vw;
+    background-size: 163vw;
+  }
+}
+
+.types-repair--levels--cols--redecorating .services-list {
+  position: absolute;
+  top: 46%;
+  left: 9%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 6%;
+  width: 22vw;
+  height: 20vw;
+  background-color: #fff;
+  line-height: 1.85vw;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--redecorating .services-list {
+    top: 58%;
+    left: 0%;
+    width: 70vw;
+    height: 65vw;
+    line-height: 6vw;
+    font-size: 13px;
+  }
+}
+
+.types-repair--levels--cols--redecorating .services-list::before {
+  content: 'Redecorating';
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--redecorating .services-list::before {
+    font-size: 15px;
+  }
+}
+
+.types-repair--levels--cols--redecorating .services-list li {
+  color: rgba(19, 19, 19, 0.5);
 }
 
 .types-repair--levels--cols--overhaul {
-  -webkit-box-flex: 0.8;
-      -ms-flex: 0.8;
-          flex: 0.8;
-  background-color: greenyellow;
+  position: relative;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--overhaul {
+    margin-top: -52vw;
+  }
+}
+
+.types-repair--levels--cols--overhaul .bg-img {
+  display: block;
+  max-width: 392px;
+  max-height: 421px;
+  width: 27.2vw;
+  height: 30vw;
+  background-image: url(/assets/images/overhaul.jpg);
+  background-repeat: no-repeat;
+  background-size: 84vw;
+  background-position: 50% 5%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--overhaul .bg-img {
+    width: 88vw;
+    height: 84vw;
+    background-size: 239vw;
+    background-position: 26% -52%;
+  }
+}
+
+.types-repair--levels--cols--overhaul .services-list {
+  position: absolute;
+  top: 46%;
+  left: 9%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 6%;
+  width: 22vw;
+  height: 20vw;
+  background-color: #fff;
+  line-height: 1.85vw;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--overhaul .services-list {
+    top: 67%;
+    left: 0%;
+    width: 70vw;
+    height: 65vw;
+    line-height: 6vw;
+    font-size: 13px;
+  }
+}
+
+.types-repair--levels--cols--overhaul .services-list::before {
+  content: 'Overhaul';
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--overhaul .services-list::before {
+    font-size: 15px;
+  }
+}
+
+.types-repair--levels--cols--overhaul .services-list li {
+  color: rgba(19, 19, 19, 0.5);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--overhaul .button-cost {
+    width: 50vw;
+    height: 10vw;
+    font-size: 15px;
+    line-height: 10vw;
+    left: -3%;
+    top: 141%;
+  }
 }
 
 .types-repair--levels--cols--designer-repair {
-  -webkit-box-flex: 0.8;
-      -ms-flex: 0.8;
-          flex: 0.8;
-  background-color: #602094;
+  position: relative;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--designer-repair {
+    margin-top: -44vw;
+    margin-bottom: 38vw;
+  }
+}
+
+.types-repair--levels--cols--designer-repair .bg-img {
+  display: block;
+  max-width: 392px;
+  max-height: 421px;
+  width: 27.2vw;
+  height: 30vw;
+  background-image: url(/assets/images/designer.jpg);
+  background-repeat: no-repeat;
+  background-size: 39vw;
+  background-position: 51% 4%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--designer-repair .bg-img {
+    width: 89vw;
+    height: 97vw;
+    background-size: 129vw;
+  }
+}
+
+.types-repair--levels--cols--designer-repair .services-list {
+  position: absolute;
+  top: 46%;
+  left: 9%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 6%;
+  width: 22vw;
+  height: 20vw;
+  background-color: #fff;
+  line-height: 1.85vw;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--designer-repair .services-list {
+    top: 58%;
+    left: 0%;
+    width: 70vw;
+    height: 65vw;
+    line-height: 6vw;
+    font-size: 13px;
+  }
+}
+
+.types-repair--levels--cols--designer-repair .services-list::before {
+  content: 'Designer Repair';
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .types-repair--levels--cols--designer-repair .services-list::before {
+    font-size: 15px;
+  }
+}
+
+.types-repair--levels--cols--designer-repair .services-list li {
+  color: rgba(19, 19, 19, 0.5);
 }
 
 .types-repair--measure {
-  background-color: gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,26 +1383,263 @@
   height: 69vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--measure {
     display: none;
   }
 }
 
 .types-repair--measure--cirles {
-  background-color: white;
-  height: 50vw;
+  position: relative;
   -webkit-box-flex: 1.36;
       -ms-flex: 1.36;
           flex: 1.36;
+  height: 50vw;
+  background-color: white;
+  background-image: url("/assets/images/house.png");
+  background-repeat: no-repeat;
+  background-position: 0% 33%;
+}
+
+.types-repair--measure--cirles .main-circle {
+  position: absolute;
+  left: -19%;
+  top: 11%;
+  width: 44vw;
+  height: 44vw;
+  border: 3px solid #e3b873;
+  border-radius: 50%;
+}
+
+.types-repair--measure--cirles .circles {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  background-color: #E3B873;
+  border: 1vw solid #fff;
+  border-radius: 50%;
+}
+
+.types-repair--measure--cirles .circles:nth-child(2) {
+  position: absolute;
+  left: 41%;
+  top: 18%;
+}
+
+.types-repair--measure--cirles .circles:nth-child(2)::before {
+  content: '01';
+  color: #fff;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+}
+
+.types-repair--measure--cirles .circles:nth-child(2)::after {
+  content: 'Our specialist will arrive for measurements per day contact, or appoint a date convenient for you';
+  position: absolute;
+  left: 4vw;
+  width: 26vw;
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #363636;
+}
+
+.types-repair--measure--cirles .circles:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  top: 33%;
+}
+
+.types-repair--measure--cirles .circles:nth-child(3)::before {
+  content: '02';
+  color: #fff;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+}
+
+.types-repair--measure--cirles .circles:nth-child(3)::after {
+  content: 'Free metering';
+  position: absolute;
+  left: 4vw;
+  top: 1vw;
+  width: 26vw;
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #363636;
+}
+
+.types-repair--measure--cirles .circles:nth-child(4) {
+  position: absolute;
+  left: 53%;
+  top: 55%;
+}
+
+.types-repair--measure--cirles .circles:nth-child(4)::before {
+  content: '03';
+  color: #fff;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+}
+
+.types-repair--measure--cirles .circles:nth-child(4)::after {
+  content: 'Free consultation';
+  position: absolute;
+  left: 4vw;
+  top: 1vw;
+  width: 26vw;
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #363636;
+}
+
+.types-repair--measure--cirles .circles:nth-child(5) {
+  position: absolute;
+  left: 45.5%;
+  top: 77.5%;
+}
+
+.types-repair--measure--cirles .circles:nth-child(5)::before {
+  content: '04';
+  color: #fff;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+}
+
+.types-repair--measure--cirles .circles:nth-child(5)::after {
+  content: 'Get a cost estimate and the timing of your future repairs';
+  position: absolute;
+  left: 4vw;
+  width: 14vw;
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #363636;
 }
 
 .types-repair--measure--form {
-  background-color: yellow;
   height: 59vw;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.types-repair--measure--form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #131313;
+  max-width: 36vw;
+  height: 36vw;
+  margin-top: 9vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2vw 4vw;
+}
+
+.types-repair--measure--form form legend {
+  width: 24vw;
+  font-family: 'FuturaDemiC';
+  font-size: 20px;
+  color: #fff;
+  padding-left: 4vw;
+  text-align: center;
+}
+
+.types-repair--measure--form form label {
+  font-family: 'FuturaBookC';
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.types-repair--measure--form form input {
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+  background-color: #131313;
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #fff;
+}
+
+.types-repair--measure--form form input::-webkit-input-placeholder {
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #fff;
+}
+
+.types-repair--measure--form form input:-ms-input-placeholder {
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #fff;
+}
+
+.types-repair--measure--form form input::-ms-input-placeholder {
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #fff;
+}
+
+.types-repair--measure--form form input::placeholder {
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: #fff;
+}
+
+.types-repair--measure--form form .btn-submit {
+  width: 15vw;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  line-height: 4vw;
+  border-radius: 2px;
+  background-color: #e3b873;
+  color: #fff;
+  font-family: 'FuturaDemiC', sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(227, 184, 115, 0.15);
+          box-shadow: 0px 5px 10px 0px rgba(227, 184, 115, 0.15);
+}
+
+.types-repair--measure--form form .btn-submit input {
+  background-color: #e3b873;
+  border: none;
+}
+
+.types-repair--measure--form--savings {
+  position: absolute;
+  font-family: 'FuturaDemiC', sans-serif;
+  font-size: 20px;
+  color: #e3b873;
+  max-width: 16vw;
+  margin: 1.5vw 0 0 9vw;
+}
+
+.types-repair--measure--form--savings::before {
+  content: '';
+  background-image: url("/assets/images/piggy.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -8vw;
+  height: 8vw;
+  width: 8vw;
 }
 
 .types-repair--fantasies {
@@ -513,12 +1649,13 @@
   -ms-flex-wrap: row;
       flex-wrap: row;
   height: 60vw;
-  background: url("/dist/assets/images/fantasy-bg.png") no-repeat;
+  background: url("/assets/images/fantasy-bg.png") no-repeat;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--fantasies {
-    background: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(64%, #fff), color-stop(0%, #131313));
+    background: linear-gradient(180deg, #fff 64%, #131313 0%);
     height: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -536,7 +1673,7 @@
           flex: 1;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--fantasies--left {
     -webkit-box-flex: 0;
         -ms-flex: none;
@@ -545,36 +1682,59 @@
 }
 
 .types-repair--fantasies--header {
-  background-color: white;
-  width: 15vw;
+  margin-top: 9vw;
   margin-left: 7vw;
+  width: 20vw;
+  line-height: 3vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 27px;
+  text-transform: uppercase;
+  color: #e3b873;
+  position: relative;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--fantasies--header {
-    margin: 0;
-    width: 100%;
-    height: 32vw;
+    margin: 7vw auto 0;
+    width: 71%;
+    height: 25vw;
+    font-size: 22px;
+    line-height: 9vw;
+    text-align: center;
+  }
+  .types-repair--fantasies--header::after {
+    content: url("/assets/images/fant-room.jpg");
+    position: absolute;
+    left: -14%;
+    top: 101%;
   }
 }
 
 .types-repair--fantasies--list {
-  background-color: pink;
   width: 15vw;
-  margin-left: 7vw;
+  line-height: 3.45vw;
+  margin-left: 4vw;
+  list-style: none;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 20px;
+  color: #fff;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--fantasies--list {
     display: none;
   }
+}
+
+.types-repair--fantasies--list li:hover {
+  color: #e3b873;
+  border-bottom: 1.5px solid #e3b873;
 }
 
 .types-repair--fantasies--img {
   -webkit-box-flex: 1.45;
       -ms-flex: 1.45;
           flex: 1.45;
-  background-color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,7 +1750,7 @@
   margin-top: -3vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--fantasies--img img:first-child {
     display: none;
   }
@@ -600,7 +1760,7 @@
   margin-top: 2.5vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--fantasies--img img:nth-child(2) {
     display: none;
   }
@@ -611,7 +1771,7 @@
   margin-top: -5vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .types-repair--fantasies--img--right {
     display: none;
   }
@@ -619,17 +1779,16 @@
 
 .design-project {
   height: 125vw;
-  background-color: green;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .design-project {
     height: 480vw;
+    background-color: #131313;
   }
 }
 
 .design-project--levels {
-  background-color: lightyellow;
   height: 60vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -645,47 +1804,87 @@
       -ms-flex-align: center;
           align-items: center;
   padding-top: 6vw;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(65.3%, white), color-stop(0%, #131313));
+  background: linear-gradient(white 65.3%, #131313 0%);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .design-project--levels {
     height: 100%;
     padding: 0;
+    background: #131313;
   }
 }
 
 .design-project--levels--header {
-  color: white;
-  background-color: pink;
+  color: #131313;
   width: 14vw;
   height: 7vw;
   margin-top: 3vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .design-project--levels--header {
-    margin: 0;
-    width: 100%;
-    height: 36vw;
+    margin: 0 auto;
+    width: 52vw;
+    height: 34vw;
+    background-color: #131313;
+    color: #fff;
+  }
+}
+
+.design-project--levels--header h2 {
+  font-family: 'Yeseva One';
+  font-size: 20px;
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5vw 0 0 1vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--header h2 {
+    font-size: 22px;
+    padding-top: 6vw;
+  }
+}
+
+.design-project--levels--header .pencil-icon {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 3vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--header .pencil-icon {
+    padding-left: 11vw;
   }
 }
 
 .design-project--levels--info {
-  color: white;
-  background-color: #083b9b;
-  width: 47vw;
+  color: #131313;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1vw;
+  width: 49vw;
   height: 7.5vw;
+  font-family: 'FuturaBookC';
+  font-size: 20px;
+  text-align: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .design-project--levels--info {
-    width: 100%;
-    height: 37vw;
+    width: 80%;
+    height: 32vw;
+    background-color: #131313;
+    color: #fff;
+    font-size: 15px;
   }
 }
 
 .design-project--levels--cols {
-  background-color: white;
+  background-color: #fff;
   width: 86vw;
   height: 42vw;
   display: -webkit-box;
@@ -694,15 +1893,39 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(46.6%, white), color-stop(0%, #131313));
+  background: linear-gradient(white 46.6%, #131313 0%);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .design-project--levels--cols {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
+    width: 90vw;
+    height: 383vw;
+    background: #131313;
+  }
+}
+
+.design-project--levels--cols .button-cost {
+  position: absolute;
+  width: 15.5vw;
+  height: 3.75vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  line-height: 3.75vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols .button-cost {
+    width: 50vw;
+    height: 10vw;
+    font-size: 15px;
+    line-height: 10vw;
+    top: 122%;
   }
 }
 
@@ -710,25 +1933,248 @@
   -webkit-box-flex: 0.8;
       -ms-flex: 0.8;
           flex: 0.8;
-  background-color: orange;
+  position: relative;
+}
+
+.design-project--levels--cols--mini .bg-img {
+  display: block;
+  max-width: 392px;
+  max-height: 421px;
+  width: 27.2vw;
+  height: 30vw;
+  background-image: url(/assets/images/redecorating.jpg);
+  background-repeat: no-repeat;
+  background-size: 52vw;
+  background-position: 49% 4%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--mini .bg-img {
+    width: 89vw;
+    height: 97vw;
+    background-size: 163vw;
+  }
+}
+
+.design-project--levels--cols--mini .services-list {
+  position: absolute;
+  top: 46%;
+  left: 8%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 6%;
+  width: 23vw;
+  height: 15vw;
+  background-color: #fff;
+  line-height: 1.85vw;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--mini .services-list {
+    top: 44%;
+    left: 0%;
+    width: 72vw;
+    height: 47vw;
+    line-height: 6vw;
+    font-size: 13px;
+  }
+}
+
+.design-project--levels--cols--mini .services-list::before {
+  content: 'Mini';
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--mini .services-list::before {
+    font-size: 15px;
+  }
+}
+
+.design-project--levels--cols--mini .services-list li {
+  color: rgba(19, 19, 19, 0.5);
+}
+
+.design-project--levels--cols--mini .button-cost {
+  top: 80%;
+  left: 8%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--mini .button-cost {
+    left: 0%;
+  }
 }
 
 .design-project--levels--cols--standard {
   -webkit-box-flex: 0.8;
       -ms-flex: 0.8;
           flex: 0.8;
-  background-color: greenyellow;
+  position: relative;
+}
+
+.design-project--levels--cols--standard .bg-img {
+  display: block;
+  max-width: 392px;
+  max-height: 421px;
+  width: 27.2vw;
+  height: 30vw;
+  background-image: url(/assets/images/designer.jpg);
+  background-repeat: no-repeat;
+  background-size: 39vw;
+  background-position: 44% 4%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--standard .bg-img {
+    width: 89vw;
+    height: 97vw;
+    background-size: 129vw;
+  }
+}
+
+.design-project--levels--cols--standard .services-list {
+  position: absolute;
+  top: 46%;
+  left: 7%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 6%;
+  width: 23vw;
+  height: 20vw;
+  background-color: #fff;
+  line-height: 1.85vw;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--standard .services-list {
+    top: 44%;
+    left: 0%;
+    width: 72vw;
+    height: 65vw;
+    line-height: 6vw;
+    font-size: 13px;
+  }
+}
+
+.design-project--levels--cols--standard .services-list::before {
+  content: 'Standard';
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--standard .services-list::before {
+    font-size: 15px;
+  }
+}
+
+.design-project--levels--cols--standard .services-list li {
+  color: rgba(19, 19, 19, 0.5);
+}
+
+.design-project--levels--cols--standard .button-cost {
+  top: 92%;
+  left: 7%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--standard .button-cost {
+    left: 0%;
+    top: 93%;
+  }
 }
 
 .design-project--levels--cols--full {
   -webkit-box-flex: 0.8;
       -ms-flex: 0.8;
           flex: 0.8;
-  background-color: #602094;
+  position: relative;
+}
+
+.design-project--levels--cols--full .bg-img {
+  display: block;
+  max-width: 392px;
+  max-height: 421px;
+  width: 27.2vw;
+  height: 30vw;
+  background-image: url(/assets/images/overhaul.jpg);
+  background-repeat: no-repeat;
+  background-size: 84vw;
+  background-position: 31% 5%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--full .bg-img {
+    width: 90vw;
+    height: 84vw;
+    background-size: 260vw;
+    background-position: 50% -50%;
+    margin-top: 18vw;
+  }
+}
+
+.design-project--levels--cols--full .services-list {
+  position: absolute;
+  top: 46%;
+  left: 7%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 6%;
+  width: 23vw;
+  height: 29vw;
+  background-color: #fff;
+  line-height: 1.85vw;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--full .services-list {
+    top: 58%;
+    left: 0%;
+    width: 72vw;
+    height: 64vw;
+    line-height: 6vw;
+    font-size: 13px;
+  }
+}
+
+.design-project--levels--cols--full .services-list::before {
+  content: 'Full';
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--full .services-list::before {
+    font-size: 15px;
+  }
+}
+
+.design-project--levels--cols--full .services-list li {
+  color: rgba(19, 19, 19, 0.5);
+}
+
+.design-project--levels--cols--full .button-cost {
+  left: 7%;
+  top: 113%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .design-project--levels--cols--full .button-cost {
+    left: 0%;
+    top: 107%;
+  }
 }
 
 .design-project--steps {
-  background-color: teal;
+  background-color: #131313;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -745,7 +2191,7 @@
   height: 59.25vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .design-project--steps {
     display: none;
   }
@@ -771,23 +2217,97 @@
 
 .design-project--steps--info--intro {
   margin-top: 5vw;
-  background-color: red;
   height: 10vw;
   width: 24vw;
 }
 
+.design-project--steps--info--intro h2 {
+  padding-left: 1vw;
+  font-family: 'FuturaDemiC', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.design-project--steps--info--intro p {
+  position: relative;
+  width: 12vw;
+  padding: 0.5vw 0 0 1vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 27px;
+  color: #e3b873;
+  text-transform: uppercase;
+}
+
+.design-project--steps--info--intro p::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4vw;
+  left: 15.5vw;
+  width: 6.5vw;
+  border-bottom: 2px solid #e3b873;
+}
+
 .design-project--steps--info--details {
-  background-color: purple;
   height: 23vw;
   width: 28vw;
   margin-top: 4vw;
+  padding: 1vw;
+}
+
+.design-project--steps--info--details .pag-num {
+  font-family: 'Yeseva One', serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+.design-project--steps--info--details h3 {
+  padding: 1vw 0;
+  width: 15vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 15px;
+  color: #e3b873;
+  text-transform: uppercase;
+}
+
+.design-project--steps--info--details p {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  width: 23vw;
+  line-height: 2vw;
 }
 
 .design-project--steps--info--slider {
-  background-color: yellow;
   height: 4vw;
-  width: 22vw;
-  margin-top: 3vw;
+  width: 20vw;
+  margin-top: 2vw;
+  margin-left: 1vw;
+}
+
+.design-project--steps--info--slider .arrow-left,
+.design-project--steps--info--slider .arrow-right {
+  color: white;
+  font-size: 30px;
+}
+
+.design-project--steps--info--slider .arrow-left:hover,
+.design-project--steps--info--slider .arrow-right:hover {
+  color: #e3b873;
+}
+
+.design-project--steps--info--slider .bullet {
+  display: inline-block;
+  margin: 0 0.5vw 0.2vw 0.5vw;
+  height: 0.7vw;
+  width: 0.7vw;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.design-project--steps--info--slider .bullet:nth-child(2), .design-project--steps--info--slider .bullet:hover {
+  background-color: #fff;
 }
 
 .design-project--steps--numbers {
@@ -801,23 +2321,109 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  background-color: blue;
   height: 100%;
 }
 
 .design-project--steps--numbers--list {
-  background-color: yellow;
-  height: 18vw;
-  margin-top: 9vw;
+  height: 13vw;
+  margin-top: 12vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3vw 1vw 0 2vw;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 5vw;
+}
+
+.design-project--steps--numbers--list li {
+  position: relative;
+  width: 10vw;
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.design-project--steps--numbers--list li:first-child {
+  color: #fff;
+}
+
+.design-project--steps--numbers--list li:nth-child(1)::before {
+  content: '01';
+  position: absolute;
+  top: -2vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 15px;
+  border-bottom: 1px solid #e3b873;
+}
+
+.design-project--steps--numbers--list li:nth-child(2)::before {
+  content: '02';
+  position: absolute;
+  top: -2vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(227, 184, 115, 0.3);
+}
+
+.design-project--steps--numbers--list li:nth-child(3)::before {
+  content: '03';
+  position: absolute;
+  top: -2vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(227, 184, 115, 0.3);
+}
+
+.design-project--steps--numbers--list li:nth-child(4)::before {
+  content: '04';
+  position: absolute;
+  top: -2vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(227, 184, 115, 0.3);
+}
+
+.design-project--steps--numbers--list li:nth-child(5)::before {
+  content: '05';
+  position: absolute;
+  top: -2vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(227, 184, 115, 0.3);
+}
+
+.design-project--steps--numbers--list li:nth-child(6)::before {
+  content: '06';
+  position: absolute;
+  top: -2vw;
+  font-family: 'Yeseva One', serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(227, 184, 115, 0.3);
 }
 
 .design-project--steps--numbers--img {
-  background-color: green;
   height: 34vw;
+  height: 26vw;
+  width: 53.125vw;
+  background-image: url("/assets/images/design-steps.jpg");
+  background-repeat: no-repeat;
+  margin-top: 2.2vw;
+  margin-left: 2.5vw;
 }
 
 .team {
-  background-color: lightyellow;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(46.5%, #131313), color-stop(0%, #fff));
+  background: linear-gradient(180deg, #131313 46.5%, #fff 0%);
   height: 65vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -834,42 +2440,69 @@
           align-items: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .team {
     height: 450vw;
+    background: #131313;
   }
 }
 
 .team--header {
-  color: white;
-  background-color: pink;
-  width: 14vw;
+  color: #fff;
+  width: 8vw;
   height: 7vw;
+  padding-top: 1vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .team--header {
     width: 100%;
-    height: 28vw;
+    height: 31vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 3vw;
+  }
+}
+
+.team--header h2 {
+  font-family: 'Yeseva One', serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--header h2 {
+    font-size: 22px;
   }
 }
 
 .team--info {
-  color: white;
-  background-color: #083b9b;
   width: 32vw;
   height: 6vw;
+  padding-top: 0.5vw;
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .team--info {
-    width: 100%;
+    width: 90vw;
     height: 20vw;
+    font-size: 15px;
+    padding-top: 2vw;
   }
 }
 
 .team--cols {
-  background-color: white;
   width: 77vw;
   height: 35vw;
   display: -webkit-box;
@@ -880,7 +2513,7 @@
           justify-content: space-between;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .team--cols {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -895,38 +2528,301 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: orange;
+}
+
+.team--cols--dmitry .img-dm {
+  position: relative;
+  margin: 3vw;
+  height: 24.8vw;
+  width: 18.9vw;
+  background-image: url("/assets/images/dmitry.jpg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--dmitry .img-dm {
+    height: 96vw;
+    width: 73vw;
+    margin: 14vw 16vw 0;
+  }
+}
+
+.team--cols--dmitry .img-dm::before {
+  content: '';
+  position: absolute;
+  top: -14%;
+  left: -21%;
+  height: 7vw;
+  width: 7vw;
+  background-image: url("/assets/images/dmitry-icon.svg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--dmitry .img-dm::before {
+    top: -14%;
+    left: -23%;
+    height: 22vw;
+    width: 24vw;
+  }
+}
+
+.team--cols--dmitry .title {
+  position: relative;
+  height: 6.5vw;
+  width: 16.2vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: -8.8vw;
+  margin-left: 4.2vw;
+  padding-top: 0.5vw;
+  text-align: center;
+  vertical-align: center;
+  background-color: #fff;
+  font-family: 'Yeseva One', serif;
+  font-size: 18px;
+  color: #131313;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--dmitry .title {
+    height: 25vw;
+    margin: -22vw 22vw 20vw;
+    padding: -1vw;
+    width: 62vw;
+  }
+}
+
+.team--cols--dmitry .title p:last-child {
+  font-family: 'FuturaBookC', sans-serif;
+  color: #959595;
+}
+
+.team--cols--dmitry .btn-experience {
+  line-height: 3.3vw;
+  width: 16.1vw;
+  margin-left: 4.2vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--dmitry .btn-experience {
+    width: 61.5vw;
+    line-height: 11vw;
+    margin: -20vw 22vw;
+    font-size: 13px;
+  }
 }
 
 .team--cols--larisa {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: greenyellow;
+}
+
+.team--cols--larisa .img-dm {
+  position: relative;
+  margin: 3vw;
+  height: 24.8vw;
+  width: 18.9vw;
+  background-image: url("/assets/images/larisa.jpg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--larisa .img-dm {
+    height: 96vw;
+    width: 73vw;
+    margin: 14vw 16vw 0;
+  }
+}
+
+.team--cols--larisa .img-dm::before {
+  content: '';
+  position: absolute;
+  top: -14%;
+  left: -21%;
+  height: 7vw;
+  width: 7vw;
+  background-image: url("/assets/images/larisa-icon.svg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--larisa .img-dm::before {
+    top: -14%;
+    left: -23%;
+    height: 22vw;
+    width: 24vw;
+  }
+}
+
+.team--cols--larisa .title {
+  position: relative;
+  height: 6.5vw;
+  width: 16.2vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: -8.8vw;
+  margin-left: 4.2vw;
+  padding-top: 0.5vw;
+  text-align: center;
+  vertical-align: center;
+  background-color: #fff;
+  font-family: 'Yeseva One', serif;
+  font-size: 18px;
+  color: #131313;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--larisa .title {
+    height: 25vw;
+    margin: -22vw 22vw 20vw;
+    padding: -1vw;
+    width: 62vw;
+  }
+}
+
+.team--cols--larisa .title p:last-child {
+  font-family: 'FuturaBookC', sans-serif;
+  color: #959595;
+}
+
+.team--cols--larisa .btn-experience {
+  line-height: 3.3vw;
+  width: 16.1vw;
+  margin-left: 4.2vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--larisa .btn-experience {
+    width: 61.5vw;
+    line-height: 11vw;
+    margin: -20vw 22vw;
+    font-size: 13px;
+  }
 }
 
 .team--cols--alexey {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #602094;
+}
+
+.team--cols--alexey .img-dm {
+  position: relative;
+  margin: 3vw;
+  height: 24.8vw;
+  width: 18.9vw;
+  background-image: url("/assets/images/alexey.jpg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--alexey .img-dm {
+    height: 96vw;
+    width: 73vw;
+    margin: 14vw 16vw 0;
+  }
+}
+
+.team--cols--alexey .img-dm::before {
+  content: '';
+  position: absolute;
+  top: -14%;
+  left: -21%;
+  height: 7vw;
+  width: 7vw;
+  background-image: url("/assets/images/alexey-icon.svg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--alexey .img-dm::before {
+    top: -14%;
+    left: -23%;
+    height: 22vw;
+    width: 24vw;
+  }
+}
+
+.team--cols--alexey .title {
+  position: relative;
+  height: 6.5vw;
+  width: 16.2vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: -8.8vw;
+  margin-left: 4.2vw;
+  padding-top: 0.5vw;
+  text-align: center;
+  vertical-align: center;
+  background-color: #fff;
+  font-family: 'Yeseva One', serif;
+  font-size: 18px;
+  color: #131313;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--alexey .title {
+    height: 25vw;
+    margin: -22vw 22vw 20vw;
+    width: 62vw;
+  }
+}
+
+.team--cols--alexey .title p:last-child {
+  font-family: 'FuturaBookC', sans-serif;
+  color: #959595;
+}
+
+.team--cols--alexey .btn-experience {
+  line-height: 3.3vw;
+  width: 16.1vw;
+  margin-left: 4.2vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .team--cols--alexey .btn-experience {
+    width: 61.5vw;
+    line-height: 11vw;
+    margin: -20vw 22vw;
+    font-size: 13px;
+  }
 }
 
 .team--info2 {
-  color: white;
-  background-color: #083b9b;
-  width: 40vw;
+  position: relative;
+  width: 39vw;
   height: 13vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .team--info2 {
     display: none;
   }
 }
 
+.team--info2::before {
+  content: '';
+  position: absolute;
+  top: 3%;
+  left: 45%;
+  width: 4vw;
+  border-bottom: 2px solid #e3b873;
+}
+
+.team--info2 p {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 20px;
+  line-height: 2vw;
+  text-align: center;
+  color: #131313;
+}
+
 .clients {
-  background-color: lightyellow;
   height: 55vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -943,24 +2839,42 @@
           align-items: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .clients {
     display: none;
   }
 }
 
 .clients--header {
-  color: white;
-  background-color: pink;
-  width: 14vw;
+  width: 10vw;
   height: 7vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 0.7vw;
+}
+
+.clients--header h2 {
+  font-family: 'Yeseva One', serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #131313;
+  text-align: center;
+}
+
+.clients--header .clients-icon {
+  padding-left: 1vw;
 }
 
 .clients--info {
-  color: white;
-  background-color: #083b9b;
-  width: 32vw;
+  width: 27vw;
   height: 6vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 1vw;
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 20px;
+  color: #131313;
+  text-align: center;
 }
 
 .clients--cols {
@@ -979,25 +2893,200 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: orange;
+  margin-right: 3vw;
+}
+
+.clients--cols--one .review {
+  width: 26.1vw;
+  height: 31.6vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5vw;
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.03);
+}
+
+.clients--cols--one .review img, .clients--cols--one .review h3 {
+  display: inline-block;
+}
+
+.clients--cols--one .review img {
+  padding-top: 1.5vw;
+}
+
+.clients--cols--one .review h3 {
+  max-width: 15vw;
+  padding-left: 1.5vw;
+  margin: 0;
+  line-height: 2vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  color: #131313;
+}
+
+.clients--cols--one .review p {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  color: #959595;
+  line-height: 2vw;
+}
+
+.clients--cols--one .stats {
+  margin-top: -2vw;
+  width: 20.35vw;
+  height: 3.75vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients--cols--one .vert-line {
+  height: 100%;
+  border-right: 1px solid #fff;
 }
 
 .clients--cols--two {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: greenyellow;
+}
+
+.clients--cols--two .review {
+  width: 26.1vw;
+  height: 31.6vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5vw;
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.03);
+}
+
+.clients--cols--two .review img, .clients--cols--two .review h3 {
+  display: inline-block;
+}
+
+.clients--cols--two .review img {
+  padding-top: 1.5vw;
+}
+
+.clients--cols--two .review h3 {
+  max-width: 15vw;
+  padding-left: 1.5vw;
+  margin: 0;
+  line-height: 2vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  color: #131313;
+}
+
+.clients--cols--two .review p {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  color: #959595;
+  line-height: 2vw;
+}
+
+.clients--cols--two .stats {
+  margin-top: -2vw;
+  width: 20.35vw;
+  height: 3.75vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients--cols--two .vert-line {
+  height: 100%;
+  border-right: 1px solid #fff;
 }
 
 .clients--cols--three {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #602094;
+  margin-left: 3vw;
+}
+
+.clients--cols--three .review {
+  width: 26.1vw;
+  height: 31.6vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5vw;
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.03);
+}
+
+.clients--cols--three .review img, .clients--cols--three .review h3 {
+  display: inline-block;
+}
+
+.clients--cols--three .review img {
+  padding-top: 1.5vw;
+}
+
+.clients--cols--three .review h3 {
+  max-width: 15vw;
+  padding-left: 1.5vw;
+  margin: 0;
+  line-height: 2vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 18px;
+  color: #131313;
+}
+
+.clients--cols--three .review p {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  color: #959595;
+  line-height: 2vw;
+}
+
+.clients--cols--three .stats {
+  margin-top: -2vw;
+  width: 20.35vw;
+  height: 3.75vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients--cols--three .vert-line {
+  height: 100%;
+  border-right: 1px solid #fff;
 }
 
 .questions {
-  background-color: purple;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(0%, #181818));
+  background: linear-gradient(180deg, #fff 50%, #181818 0%);
+  background-image: url("/assets/images/bg-contacts.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px -46%;
+  background-size: cover;
   height: 32vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1014,27 +3103,234 @@
           align-items: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .questions {
-    height: 145vw;
+    height: 146vw;
   }
 }
 
 .questions--form {
-  background-color: lime;
+  background-color: #131313;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 31vw;
   width: 60vw;
+  padding: 2vw 12vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .questions--form {
     height: 100%;
     width: 100%;
+    padding: 13vw 5vw 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.questions--form legend {
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.questions--form .block1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .questions--form .block1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 57vw;
+    padding-top: 15vw;
+  }
+}
+
+.questions--form .block1 .col1,
+.questions--form .block1 .col2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-family: 'FuturaBookC';
+}
+
+.questions--form .block1 .col1 label,
+.questions--form .block1 .col2 label {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.questions--form .block1 .col1 {
+  margin-right: 3vw;
+}
+
+.questions--form .block1 .col1 #your-name {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  line-height: 2vw;
+  color: #fff;
+}
+
+.questions--form .block1 .col1 #your-name::-webkit-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .block1 .col1 #your-name:-ms-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .block1 .col1 #your-name::-ms-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .block1 .col1 #your-name::placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .block1 .col2 #your-phone {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  line-height: 2vw;
+  color: #fff;
+}
+
+.questions--form .block1 .col2 #your-phone::-webkit-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .block1 .col2 #your-phone:-ms-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .block1 .col2 #your-phone::-ms-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .block1 .col2 #your-phone::placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .your-question-cl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  font-family: 'FuturaBookC';
+}
+
+.questions--form .your-question-cl label {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.questions--form .your-question-cl #your-question {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  line-height: 2vw;
+  color: #fff;
+}
+
+.questions--form .your-question-cl #your-question::-webkit-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .your-question-cl #your-question:-ms-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .your-question-cl #your-question::-ms-input-placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form .your-question-cl #your-question::placeholder {
+  font-size: 18px;
+  color: #fff;
+}
+
+.questions--form--tos {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  position: relative;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .questions--form--tos {
+    padding-top: 8vw;
+    font-size: 16px;
+  }
+}
+
+.questions--form .btn-submit {
+  width: 13.9vw;
+  height: 3.5vw;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .questions--form .btn-submit {
+    width: 91vw;
+    height: 14vw;
+    margin-top: 17vw;
   }
 }
 
 .contact {
-  background-color: blue;
   height: 50vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1049,37 +3345,157 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url("/assets/images/bg-contacts.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 99%;
+  background-size: cover;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .contact {
-    height: 160vw;
+    height: 137vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background: #131313;
   }
 }
 
 .contact--address {
-  background-color: red;
-  height: 13vw;
+  margin-top: 2vw;
+  height: 11vw;
   width: 40vw;
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #e3b873;
+  text-align: center;
+  line-height: 0.7vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .contact--address {
     width: 100%;
-    height: 50%;
+    font-size: 18px;
+    margin-top: 0;
+    padding-top: 10vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    line-height: 7vw;
+  }
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .contact--address p {
+    margin: 0;
+  }
+}
+
+.contact--address--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1vw;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .contact--address--social {
+    height: 18vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.contact--address--social .email,
+.contact--address--social .insta {
+  position: relative;
+  margin-right: 1vw;
+  width: 28px;
+  height: 28px;
+  max-width: 28px;
+  max-height: 28px;
+  background-color: #e3b873;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .contact--address--social .email,
+  .contact--address--social .insta {
+    width: 39px;
+    height: 39px;
+    max-width: 39px;
+    max-height: 39px;
+    margin: 0 3vw;
+  }
+}
+
+.contact--address--social .email:hover,
+.contact--address--social .insta:hover {
+  background-color: rgba(227, 184, 115, 0.3);
+}
+
+.contact--address--social .email::before {
+  content: '';
+  position: absolute;
+  background-image: url("/assets/images/email-icon.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  left: 23%;
+  top: 25%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .contact--address--social .email::before {
+    left: 28%;
+    top: 31%;
+  }
+}
+
+.contact--address--social .insta::before {
+  content: '';
+  position: absolute;
+  background-image: url("/assets/images/insta-icon.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  left: 24%;
+  top: 25%;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .contact--address--social .insta::before {
+    left: 31%;
+    top: 31%;
   }
 }
 
 .contact--map {
-  background-color: pink;
   height: 32vw;
   width: 64vw;
+  background-image: url("/assets/images/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 106%;
+  background-position: -2vw -1vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .contact--map {
-    width: 100%;
-    height: 50%;
+    width: 90vw;
+    height: 68vw;
+    background-size: 116vw;
+    background-position: center 0;
+    margin-top: 13vw;
   }
 }
 
@@ -1087,48 +3503,144 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 9.76vw;
+  padding: 0 6vw 0 5vw;
+  height: 5.76vw;
   background-color: #131313;
+  color: #e3b873;
+  font-family: 'FuturaDemiC', sans-serif;
   text-transform: uppercase;
-  color: #E3B873;
-  font-family: 'Futura Book Regular';
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) and (min-width: 375px) {
   .footer {
     display: none;
   }
 }
 
-.footer_h1 {
+.footer--h1 {
   margin: 0;
   font-size: 14px;
 }
 
-.footer-nav--menu {
+.footer--menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 14px;
 }
 
-.footer-nav--menu--link {
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .footer--menu {
+    display: none;
+  }
+}
+
+.footer--menu li:first-child a {
+  color: #e3b873;
+}
+
+.footer--menu .nav-link {
   text-decoration: none;
   color: #fff;
   padding: 0 1vw;
 }
 
+.footer--menu .nav-link:hover {
+  color: #e3b873;
+}
+
+.footer--phone {
+  color: #e3b873;
+  text-decoration: underline;
+}
+
+.footer .request-call {
+  width: 161px;
+  height: 37px;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: center;
+}
+
+@media screen and (max-width: 640px) and (min-width: 375px) {
+  .footer .request-call {
+    display: none;
+  }
+}
+
+.button-beige {
+  background-color: #e3b873;
+  color: #fff;
+  font-family: 'FuturaDemiC', sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.3);
+          box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.3);
+}
+
+.button-beige:hover {
+  color: #e3b873;
+  background-color: #fff;
+  border: 2px solid #e3b873;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.3);
+          box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.3);
+}
+
+.button-white {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  color: #fff;
+  font-family: 'FuturaDemiC', sans-serif;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
 @font-face {
-  font-family: 'Futura Book Regular';
-  src: url("/assets/fonts/FuturaBT-Book.woff2") format("woff2");
+  font-family: 'Proxima Nova';
+  src: url("/assets/fonts/ProximaNova-Regular.eot");
+  src: url("/assets/fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ProximaNova-Regular.woff2") format("woff2"), url("/assets/fonts/ProximaNova-Regular.woff") format("woff"), url("/assets/fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaBookC';
+  src: url("/assets/fonts/FuturaBookC.eot");
+  src: url("/assets/fonts/FuturaBookC.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/FuturaBookC.woff2") format("woff2"), url("/assets/fonts/FuturaBookC.woff") format("woff"), url("/assets/fonts/FuturaBookC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaDemiC';
+  src: url("/assets/fonts/FuturaDemiC.eot");
+  src: url("/assets/fonts/FuturaDemiC.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/FuturaDemiC.woff2") format("woff2"), url("/assets/fonts/FuturaDemiC.woff") format("woff"), url("/assets/fonts/FuturaDemiC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaMediumC';
+  src: url("/assets/fonts/FuturaMediumC.eot");
+  src: url("/assets/fonts/FuturaMediumC.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/FuturaMediumC.woff2") format("woff2"), url("/assets/fonts/FuturaMediumC.woff") format("woff"), url("/assets/fonts/FuturaMediumC.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yeseva One';
+  src: url("/assets/fonts/YesevaOne.eot");
+  src: url("/assets/fonts/YesevaOne.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/YesevaOne.woff2") format("woff2"), url("/assets/fonts/YesevaOne.woff") format("woff"), url("/assets/fonts/YesevaOne.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -1201,6 +3713,7 @@ pre {
  */
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**

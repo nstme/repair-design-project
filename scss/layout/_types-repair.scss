@@ -1,5 +1,4 @@
 .types-repair--levels {
-    background-color: lightyellow;
     height: 60vw;
     display: flex;
     flex-direction: column;
@@ -13,16 +12,37 @@
 //types-repair--levels--header
 
 .types-repair--levels--header {
-    color: white;
-    background-color: pink;
     width: 14vw;
     height: 9vw;
     margin-top: 2vw;
+
     @include xs {
-        width: 100%;
-        margin: 0;
-        height: 45vw;
+        width: 54%;
+        margin: 14vw auto;
+        height: 17vw;
     }
+
+    & h2 {
+        position: relative;
+        margin: 2vw 0 1vw 1vw;
+        font-family: 'Yeseva One', serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: $bg-color-dark;
+
+        @include xs {
+            font-size: 22px;
+        }
+    }
+
+    & .tools-icon {
+        margin-left: 2.9vw;
+        @include xs {
+            margin-left: 11vw;
+            margin-top: 3vw;
+        }
+    }
+
 }
 
 .types-repair--levels--cols{
@@ -35,27 +55,227 @@
         flex-direction: column;
         height: 100%;
     }
-}
 
-.types-repair--levels--cols--redecorating {
-    flex: 0.8;
-    background-color: orange;
-}
+    & .button-cost {
+            position: absolute;
+            left: 9%;
+            bottom: 0%;
+            width: 15.8vw;
+            height: 3.75vw;
+            font-family: 'Yeseva One', sans-serif;
+            font-size: 18px;
+            line-height: 3.75vw;
+            text-align: center;
 
-.types-repair--levels--cols--overhaul{
-    flex: 0.8;
-    background-color: greenyellow;
-}
+            @include xs {
+                width: 50vw;
+                height: 10vw;
+                font-size: 15px;
+                line-height: 10vw;
+                left: -3%;
+                top: 122%;
+            }
+        }
 
-.types-repair--levels--cols--designer-repair {
-    flex: 0.8;
-    background-color: rgb(96, 32, 148);
+    &--redecorating {
+        position: relative;
+
+        & .bg-img {
+            display: block;
+            max-width: 392px;
+            max-height: 421px;
+            width: 27.2vw;
+            height: 30vw;
+            background-image: url(/assets/images/redecorating.jpg);
+            background-repeat: no-repeat;
+            background-size: 52vw;
+            background-position: 49% 4%;
+
+            @include xs {
+                width: 89vw;
+                height: 97vw;
+                background-size: 163vw;
+            }
+        }
+
+        & .services-list {
+            position: absolute;
+            top: 46%;
+            left: 9%;
+            box-sizing: border-box;
+            padding-top: 6%;
+            width: 22vw;
+            height: 20vw;
+            background-color: $color-white;
+            line-height: 1.85vw;
+            box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.03);
+
+            @include xs {
+                top: 58%;
+                left: 0%;
+                width: 70vw;
+                height: 65vw;
+                line-height: 6vw;
+                font-size: 13px;
+            }
+
+            &::before {
+                content: 'Redecorating';
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 18px;
+
+                @include xs {
+                    font-size: 15px;
+                }
+            }
+
+            & li{
+                color: $bg-color-dark-50;
+            }
+        }
+    }
+
+    &--overhaul{
+        position: relative;
+        @include xs {
+            margin-top: -52vw;
+        }
+        
+
+        & .bg-img {
+            display: block;
+            max-width: 392px;
+            max-height: 421px;
+            width: 27.2vw;
+            height: 30vw;
+            background-image: url(/assets/images/overhaul.jpg);
+            background-repeat: no-repeat;
+            background-size: 84vw;
+            background-position: 50% 5%;
+            @include xs {
+                width: 88vw;
+                height: 84vw;
+                background-size: 239vw;
+                background-position: 26% -52%;
+            }
+        }
+
+        & .services-list {
+            position: absolute;
+            top: 46%;
+            left: 9%;
+            box-sizing: border-box;
+            padding-top: 6%;
+            width: 22vw;
+            height: 20vw;
+            background-color: $color-white;
+            line-height: 1.85vw;
+            box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.03);
+
+            @include xs {
+                top: 67%;
+                left: 0%;
+                width: 70vw;
+                height: 65vw;
+                line-height: 6vw;
+                font-size: 13px;
+            }
+
+            &::before {
+                content: 'Overhaul';
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 18px;
+                @include xs {
+                    font-size: 15px;
+                }
+            }
+
+            & li{
+                color: $bg-color-dark-50;
+            }
+        }
+
+        & .button-cost {
+
+            @include xs {
+                width: 50vw;
+                height: 10vw;
+                font-size: 15px;
+                line-height: 10vw;
+                left: -3%;
+                top: 141%;
+            }
+        }
+    }
+
+    &--designer-repair {
+        position: relative;
+
+        @include xs {
+            margin-top: -44vw;
+            margin-bottom: 38vw;
+        }
+
+        & .bg-img {
+            display: block;
+            max-width: 392px;
+            max-height: 421px;
+            width: 27.2vw;
+            height: 30vw;
+            background-image: url(/assets/images/designer.jpg);
+            background-repeat: no-repeat;
+            background-size: 39vw;
+            background-position: 51% 4%;
+
+            @include xs {
+                width: 89vw;
+                height: 97vw;
+                background-size: 129vw;
+            }
+        }
+
+        & .services-list {
+            position: absolute;
+            top: 46%;
+            left: 9%;
+            box-sizing: border-box;
+            padding-top: 6%;
+            width: 22vw;
+            height: 20vw;
+            background-color: $color-white;
+            line-height: 1.85vw;
+            box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.03);
+
+            @include xs {
+                top: 58%;
+                left: 0%;
+                width: 70vw;
+                height: 65vw;
+                line-height: 6vw;
+                font-size: 13px;
+            }
+
+            &::before {
+                content: 'Designer Repair';
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 18px;
+                @include xs {
+                    font-size: 15px;
+                }
+            }
+
+            & li{
+                color: $bg-color-dark-50;
+            }
+        }
+    }
+
+    
 }
 
 // types-repair--measure
 
 .types-repair--measure {
-    background-color: gray;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -64,18 +284,229 @@
     @include xs {
             display: none;
     }
+
 }
 
 .types-repair--measure--cirles {
-    background-color: white;
-    height: 50vw;
+    position: relative;
     flex: 1.36;
+    height: 50vw;
+    background-color: white;
+    background-image: url('/assets/images/house.png');
+    background-repeat: no-repeat;
+    background-position: 0% 33%;
+
+    & .main-circle {
+        position: absolute;
+        left: -19%;
+        top: 11%;
+        width: 44vw;
+        height: 44vw;
+        border: 3px solid $color-beige;
+        border-radius: 50%;
+    }
+
+    & .circles {
+        position: absolute;
+        width: 3vw;
+        height: 3vw;
+        background-color: #E3B873;
+        border: 1vw solid $color-white;
+        border-radius: 50%;
+
+        &:nth-child(2) {
+            position: absolute;
+            left: 41%;
+            top: 18%;
+
+            &::before{
+                content: '01';
+                color: $color-white;
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 18px;
+                position: absolute;
+                left: 11px;
+                top: 11px;
+            }
+
+            &::after {
+                content: 'Our specialist will arrive for measurements per day contact, or appoint a date convenient for you';
+                position: absolute;
+                left: 4vw;
+                width: 26vw;
+                font-family: 'FuturaMediumC';
+                font-size: 18px;
+                color: #363636;
+            }
+        }
+
+        &:nth-child(3) {
+            position: absolute;
+            left: 50%;
+            top: 33%;
+
+            &::before{
+                content: '02';
+                color: $color-white;
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 18px;
+                position: absolute;
+                left: 11px;
+                top: 11px;
+            }
+
+            &::after {
+                content: 'Free metering';
+                position: absolute;
+                left: 4vw;
+                top: 1vw;
+                width: 26vw;
+                font-family: 'FuturaMediumC';
+                font-size: 18px;
+                color: #363636;
+            }
+        }
+
+        &:nth-child(4) {
+            position: absolute;
+            left: 53%;
+            top: 55%;
+
+            &::before{
+                content: '03';
+                color: $color-white;
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 18px;
+                position: absolute;
+                left: 11px;
+                top: 11px;
+            }
+
+            &::after {
+                content: 'Free consultation';
+                position: absolute;
+                left: 4vw;
+                top: 1vw;
+                width: 26vw;
+                font-family: 'FuturaMediumC';
+                font-size: 18px;
+                color: #363636;
+            }
+        }
+
+        &:nth-child(5) {
+            position: absolute;
+            left: 45.5%;
+            top: 77.5%;
+
+            &::before{
+                content: '04';
+                color: $color-white;
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 18px;
+                position: absolute;
+                left: 11px;
+                top: 11px;
+            }
+
+            &::after {
+                content: 'Get a cost estimate and the timing of your future repairs';
+                position: absolute;
+                left: 4vw;
+                width: 14vw;
+                font-family: 'FuturaMediumC';
+                font-size: 18px;
+                color: #363636;
+            }
+        }
+    }
 }
 
 .types-repair--measure--form {
-    background-color: yellow;
     height: 59vw;
     flex: 1;
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $bg-color-dark;
+        max-width: 36vw;
+        height: 36vw;
+        margin-top: 9vw;
+        box-sizing: border-box;
+        padding: 2vw 4vw;
+
+        & legend {
+            width: 24vw;
+            font-family: 'FuturaDemiC';
+            font-size: 20px;
+            color: $color-white;
+            padding-left: 4vw;
+            text-align: center;
+        }
+
+        & label {
+            font-family: 'FuturaBookC';
+            font-size: 15px;
+            color: $color-white-30;
+        }
+
+        & input {
+            border: none;
+            border-bottom: 1.5px solid $color-white-30;
+            background-color: $bg-color-dark;
+            font-family: 'FuturaMediumC';
+            font-size: 18px;
+            color: $color-white;
+            
+            &::placeholder{
+                font-family: 'FuturaMediumC';
+                font-size: 18px;
+                color: $color-white;
+            }
+
+        }
+
+        & .btn-submit {
+            width: 15vw;
+            align-self: flex-end;
+            line-height: 4vw;
+            border-radius: 2px;
+            background-color: $color-beige;
+            color: $color-white;
+            font-family: 'FuturaDemiC', sans-serif;
+            border: 1px solid $color-transparent;
+            border-radius: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            box-shadow: 0px 5px 10px 0px rgba(227,184,115, 0.15);
+                & input {
+                    background-color: $color-beige;
+                    border: none;
+                }
+        }
+
+    }
+
+    &--savings {
+        position: absolute;
+        font-family: 'FuturaDemiC', sans-serif;
+        font-size: 20px;
+        color: $color-beige;
+        max-width: 16vw;
+        margin: 1.5vw 0 0 9vw;
+
+        &::before {
+            content: '';
+            background-image: url('/assets/images/piggy.svg');
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -8vw;
+            height: 8vw;
+            width: 8vw;
+        }
+    }
 }
 
 // types-repair--fantasies
@@ -87,7 +518,7 @@
     background: url('/assets/images/fantasy-bg.png') no-repeat;
 
     @include xs {
-            background: none;
+            background: linear-gradient(180deg, $color-white 64%, $bg-color-dark 0%);;
             height: 100vw;
             display: flex;
             flex-direction: column;
@@ -102,29 +533,56 @@
 }
 
 .types-repair--fantasies--header {
-    background-color: white;
-    width: 15vw;
+    margin-top: 9vw;
     margin-left: 7vw;
+    width: 20vw;
+    line-height: 3vw;
+    font-family: 'Yeseva One', serif;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: $color-beige;
+    position: relative;
+
      @include xs {
-        margin: 0;
-        width: 100%;
-        height: 32vw;
+        margin: 7vw auto 0;
+        width: 71%;
+        height: 25vw;
+        font-size: 22px;
+        line-height: 9vw;
+        text-align: center;
+
+        &::after {
+            content: url('/assets/images/fant-room.jpg');
+            position: absolute;
+            left: -14%;
+            top: 101%;
+        }
     }
+    
 }
 
 .types-repair--fantasies--list {
-    background-color: pink;
     width: 15vw;
-    margin-left: 7vw;
+    line-height: 3.45vw;
+    margin-left: 4vw;
+    list-style: none;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 20px;
+    color: $color-white;
+
     @include xs {
             display: none;
+    }
+
+    & li:hover {
+        color: $color-beige;
+        border-bottom: 1.5px solid $color-beige;
     }
 }
 
 
 .types-repair--fantasies--img {
     flex: 1.45;
-    background-color: yellow;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;

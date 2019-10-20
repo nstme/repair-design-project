@@ -1,6 +1,5 @@
 
 .clients {
-    background-color: lightyellow;
     height: 55vw;
     display: flex;
     flex-direction: column;
@@ -9,41 +8,206 @@
     @include xs {
         display: none;
     }
-}
 
-.clients--header {
-    color: white;
-    background-color: pink;
-    width: 14vw;    
-    height: 7vw;
-}
+    &--header {
+        width: 10vw;    
+        height: 7vw;
+        box-sizing: border-box;
+        padding-top: 0.7vw;
 
-.clients--info {
-    color: white;
-    background-color: rgb(8, 59, 155);
-    width: 32vw;
-    height: 6vw;
-}
+        & h2 {
+            font-family: 'Yeseva One', serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $bg-color-dark;
+            text-align: center;
+        }
 
-.clients--cols{
-    background-color: white;
-    width: 86vw;
-    height: 35vw;
-    display: flex;
-    justify-content: space-between;
-}
+        & .clients-icon {
+            padding-left: 1vw;
+        }
+    }
 
-.clients--cols--one {
-    flex: 1;
-    background-color: orange;
-}
+    &--info {
+        width: 27vw;
+        height: 6vw;
+        box-sizing: border-box;
+        padding-top: 1vw;
+        font-family: 'FuturaBookC', sans-serif;
+        font-size: 20px;
+        color: $bg-color-dark;
+        text-align: center;
+    }
 
-.clients--cols--two{
-    flex: 1;
-    background-color: greenyellow;
-}
+    &--cols{
+        background-color: white;
+        width: 86vw;
+        height: 35vw;
+        display: flex;
+        justify-content: space-between;
 
-.clients--cols--three {
-    flex: 1;
-    background-color: rgb(96, 32, 148);
+        &--one {
+            flex: 1;
+            margin-right: 3vw;
+
+            & .review {
+                width: 26.1vw;
+                height: 31.6vw;
+                box-sizing: border-box;
+                padding: 1.5vw;
+                box-shadow: 0px 10px 50px 0px rgba(0,0,0, 0.03);
+
+
+                & img, h3 {
+                    display: inline-block;
+                }
+
+                & img {
+                    padding-top: 1.5vw;
+                }
+
+                & h3 {
+                    max-width: 15vw;
+                    padding-left: 1.5vw;
+                    margin: 0;
+                    line-height: 2vw;
+                    font-family: 'Yeseva One', sans-serif;
+                    font-size: 18px;
+                    color: $bg-color-dark;
+                }
+
+                & p {
+                    font-family: 'FuturaBookC', sans-serif;
+                    font-size: 15px;
+                    color: #959595;
+                    line-height: 2vw;
+                }
+            }
+
+            & .stats {
+                margin-top: -2vw;
+                width: 20.35vw;
+                height: 3.75vw;
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 17px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .vert-line {
+                    height: 100%;
+                    border-right: 1px solid $color-white;
+            }
+        }
+
+        &--two{
+            flex: 1;
+
+            & .review {
+                width: 26.1vw;
+                height: 31.6vw;
+                box-sizing: border-box;
+                padding: 1.5vw;
+                box-shadow: 0px 10px 50px 0px rgba(0,0,0, 0.03);
+
+
+                & img, h3 {
+                    display: inline-block;
+                }
+
+                & img {
+                    padding-top: 1.5vw;
+                }
+
+                & h3 {
+                    max-width: 15vw;
+                    padding-left: 1.5vw;
+                    margin: 0;
+                    line-height: 2vw;
+                    font-family: 'Yeseva One', sans-serif;
+                    font-size: 18px;
+                    color: $bg-color-dark;
+                }
+
+                & p {
+                    font-family: 'FuturaBookC', sans-serif;
+                    font-size: 15px;
+                    color: #959595;
+                    line-height: 2vw;
+                }
+            }
+
+            & .stats {
+                margin-top: -2vw;
+                width: 20.35vw;
+                height: 3.75vw;
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 17px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .vert-line {
+                    height: 100%;
+                    border-right: 1px solid $color-white;
+            }
+        }
+
+        &--three {
+            flex: 1;
+            margin-left: 3vw;
+
+            & .review {
+                width: 26.1vw;
+                height: 31.6vw;
+                box-sizing: border-box;
+                padding: 1.5vw;
+                box-shadow: 0px 10px 50px 0px rgba(0,0,0, 0.03);
+
+
+                & img, h3 {
+                    display: inline-block;
+                }
+
+                & img {
+                    padding-top: 1.5vw;
+                }
+
+                & h3 {
+                    max-width: 15vw;
+                    padding-left: 1.5vw;
+                    margin: 0;
+                    line-height: 2vw;
+                    font-family: 'Yeseva One', sans-serif;
+                    font-size: 18px;
+                    color: $bg-color-dark;
+                }
+
+                & p {
+                    font-family: 'FuturaBookC', sans-serif;
+                    font-size: 15px;
+                    color: #959595;
+                    line-height: 2vw;
+                }
+            }
+
+            & .stats {
+                margin-top: -2vw;
+                width: 20.35vw;
+                height: 3.75vw;
+                font-family: 'Yeseva One', sans-serif;
+                font-size: 17px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .vert-line {
+                    height: 100%;
+                    border-right: 1px solid $color-white;
+            }
+        }
+    }
 }

@@ -1,7 +1,10 @@
 $max-width: 1440px;
 
-$bg-color-dark: #131313;
-
-//fonts
-$font-beige: #E3B873;
-$font-white: #fff;
+$bg-color-dark: rgb(19, 19, 19);
+$bg-color-dark-50: rgba(19, 19, 19, 0.5);
+$color-beige: rgb(227,184,115);
+$color-beige-30: rgba(227,184,115, 0.3);
+$color-white: #fff;
+$color-white-30: rgba(255,255,255,0.3);
+$color-white-50: rgba(255,255,255,0.5);
+$color-transparent: rgba(0,0,0,0);

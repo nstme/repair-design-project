@@ -1,21 +1,144 @@
 .questions {
-    background-color: purple;
+    background: linear-gradient(180deg, $color-white 50%, #181818 0%);
+    background-image: url('/assets/images/bg-contacts.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px -46%;
+    background-size: cover;
     height: 32vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
     @include xs {
-        height: 145vw;
+        height: 146vw;
     }
-}
 
-.questions--form {
-    background-color: lime;
+    &--form {
+    background-color: $bg-color-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     height: 31vw;
     width: 60vw;
-    @include xs {
-        height: 100%;
-        width: 100%;
+    padding: 2vw 12vw;
+    box-sizing: border-box;
+        @include xs {
+            height: 100%;
+            width: 100%;
+            padding: 13vw 5vw 0;
+            justify-content: flex-start;
+        }
+
+        & legend {
+            font-family: 'Yeseva One', sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+
+        & .block1 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @include xs {
+                flex-direction: column;
+                height: 57vw;
+                padding-top: 15vw;
+            }
+
+            & .col1,
+            & .col2 {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                font-family: 'FuturaBookC';
+                & label {
+                    font-size: 15px;
+                    color: $color-white-50;
+                }
+            }
+
+            & .col1 {
+                margin-right: 3vw;
+
+                & #your-name {
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $color-white-30;
+                    box-shadow: none;
+                    line-height: 2vw;
+                    color: $color-white;
+                    &::placeholder {
+                        font-size: 18px;
+                        color: $color-white;
+                    }
+                }
+            
+            }
+
+            & .col2 {
+                & #your-phone {
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $color-white-30;
+                    box-shadow: none;
+                    line-height: 2vw;
+                    color: $color-white;
+                        &::placeholder {
+                        font-size: 18px;
+                        color: $color-white;
+                    }
+                }
+            
+            }
+        }
+
+        & .your-question-cl {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-family: 'FuturaBookC';
+            
+            & label {
+                font-size: 15px;
+                color: $color-white-50;
+            }
+            
+            & #your-question {
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $color-white-30;
+                    box-shadow: none;
+                    line-height: 2vw;
+                    color: $color-white;
+                    &::placeholder {
+                        font-size: 18px;
+                        color: $color-white;
+                    }
+            }
+        }
+
+        &--tos {
+            font-family: 'FuturaBookC', sans-serif;
+            font-size: 15px;
+            color: $color-white;
+            position: relative;
+            @include xs {
+                padding-top: 8vw;
+                  font-size: 16px;
+            }
+        }
+
+        & .btn-submit {
+            width: 13.9vw;
+            height: 3.5vw;
+            font-size: 15px;
+            @include xs {
+                width: 91vw;
+                height: 14vw;
+                margin-top: 17vw;
+            }
+        }
     }
 }

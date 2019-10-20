@@ -4,44 +4,78 @@
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6vw 0 5vw;
+    height: 5.76vw;
+    background-color: $bg-color-dark;
+    color: $color-beige;
+    font-family: 'FuturaDemiC', sans-serif;
+    text-transform: uppercase;
+        
+    @include xs {
+        height: 15vw;
+    }
+
+    &--h1{
+        margin: 0;
+        font-size: 14px;
+        @include xs {
+            font-size: 12px;
+        }
+    }
+
+    &--menu {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex: 1;
-        height: 5.76vw;
-        background-color: $bg-color-dark;
-        text-transform: uppercase;
-        color: $font-beige;
-        font-family: 'Futura Book Regular';
+        list-style: none;
+        font-family: 'FuturaBookC', sans-serif;
+        font-size: 14px;
         
         @include xs {
-            height: 15vw;
+            display: none;
         }
-}
 
-.header_h1{
-    margin: 0;
-    font-size: 14px;
-}
+        & li {
+          &:first-child a {
+                color: $color-beige;
+            }  
+        }
+        .nav-link {
+        text-decoration: none;
+        color: $color-white;
+        padding: 0 1vw;
 
-.header-menu {
-    display: flex;
-    list-style: none;
-    
-    @include xs {
-        display: none;
+            &:hover {
+                color: $color-beige;
+            }
+        }
+
     }
 
-}
+    &--phone {
+        color: $color-beige;
+        text-decoration: underline;
+        @include xs {
+            font-size: 12px;
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
 
-.nav-link {
-    text-decoration: none;
-    color: $font-white;
-    padding: 0 1vw;
-}
-
-.request-call {
-    @include xs {
-        display: none;
+    .request-call {
+        width: 161px;
+        height: 37px;
+        font-size: 13px;
+        line-height: 40px;
+        text-align: center;
+        vertical-align: center;
+        @include xs {
+            display: none;
+        }
     }
 }
+
+
+
+

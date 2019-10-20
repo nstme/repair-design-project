@@ -1,31 +1,126 @@
 .contact {
-    background-color: blue;
     height: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;  
+    background-image: url('/assets/images/bg-contacts.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px 99%;
+    background-size: cover;
     @include xs {
-        height: 160vw;
+        height: 137vw;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        background: $bg-color-dark;
     }
-}
 
-.contact--address {
-    background-color: red;
-    height: 13vw;
+    &--address {
+    margin-top: 2vw;
+    height: 11vw;
     width: 40vw;
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $color-beige;
+    text-align: center;
+    line-height: 0.7vw;
+
     @include xs {
         width: 100%;
-        height: 50%
+        font-size: 18px;
+        margin-top: 0;
+        padding-top: 10vw;
+        box-sizing: border-box;
+        line-height: 7vw;
+    }
+
+    & p {
+        @include xs {
+            margin: 0;
+        }
+    }
+
+    &--social {
+        display: flex;
+        justify-content: center;
+        padding-top: 1vw;
+
+        @include xs {
+            height: 18vw;
+            align-items: center;
+        }
+        & .email,
+        & .insta {
+            position: relative;
+            margin-right: 1vw;
+            width: 28px;
+            height: 28px;
+            max-width: 28px;
+            max-height: 28px;
+            background-color: $color-beige;
+            border-radius: 50%;
+
+            @include xs {
+                width: 39px;
+                height: 39px;
+                max-width: 39px;
+                max-height: 39px;
+                margin: 0 3vw;
+            }
+            &:hover {
+                background-color: $color-beige-30;
+            }
+        }
+
+        & .email::before{
+            content: '';
+            position: absolute;
+            background-image: url('/assets/images/email-icon.svg');
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            left: 23%;
+            top: 25%;
+            @include xs {
+                left: 28%;
+                top: 31%;
+            }
+        }
+
+        & .insta::before{
+            content: '';
+            position: absolute;
+            background-image: url('/assets/images/insta-icon.svg');
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            left: 24%;
+            top: 25%;
+            @include xs {
+                left: 31%;
+                top: 31%;
+            }
+        }
     }
 }
 
-.contact--map {
-    background-color: pink;
-    height: 32vw;
-    width: 64vw;
-    @include xs {
-        width: 100%;
-        height: 50%
+    &--map {
+        height: 32vw;
+        width: 64vw;
+        background-image: url('/assets/images/map.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 106%;
+        background-position: -2vw -1vw;
+        @include xs {
+            width: 90vw;
+            height: 68vw;
+            background-size: 116vw;
+            background-position: center 0;
+            margin-top: 13vw;
+        }
     }
 }
+

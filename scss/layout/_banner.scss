@@ -4,10 +4,10 @@
     justify-content: flex-start;
     align-items: center;
     height: 52.431vw;
-    background-color: pink;
+    background-color: $bg-color-dark;
 
     @include xs {
-            height: 126vw;
+        height: 126vw;
     }
 
 }
@@ -20,6 +20,17 @@
     width: 56vw;
     margin-left: -23.6vw;
     margin-right: -23.7vw;
+    background-color: $bg-color-dark;
+    
+    & a {
+    margin: 0;
+    line-height: 5.7vw;
+    color: $color-beige;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'FuturaDemiC', sans-serif;
+    font-size: 14px;
+    }
 
     @include xs {
             display: none;
@@ -27,16 +38,21 @@
     
 }
 
-.instagram p {
-    margin: 0;
-    line-height: 5.7vw;
+.instagram::after{
+    position: absolute;
+    top: 2.5vw;
+    left: 31vw;
+    content: '';
+    height: 2px;
+    width: 51px;
+    border-bottom: 1.5px solid $color-beige;
 }
 
 .turn-key {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    background-color: green;
+    background: url('/assets/images/banner-bg.jpg') no-repeat;
     margin-bottom: 3.3vw;
     width: 100%;
     height: 49.1vw;
@@ -45,17 +61,115 @@
         margin: 0;
         height: 100%;
     }
+
+    &--info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 49vw;
+        padding-left: 4vw;
+        color: $color-white;
+
+        @include xs {
+                height: 100%;
+                width: 100%;
+                justify-content: flex-start;
+            }
+         
+
+        & p:first-child {
+        max-width: 36vw;
+        text-transform: uppercase;
+        font-family: 'Yeseva One', serif;
+        font-size: 40px;
+        line-height: 4vw;
+        margin: 0;
+        margin-top: -2vw;
+
+            & span {
+                color: $color-beige;
+            }
+
+            @include xs {
+                font-size: 23px;
+                max-width: 80vw;
+                margin-top: 24vw;
+                line-height: 7vw;
+            }
+        }
+
+        & p {
+            max-width: 29vw;
+            font-family: 'FuturaBookC', sans-serif;
+            font-size: 22px;
+            line-height: 30px;
+            margin: 0;
+            margin-top: 1vw;
+            @include xs {
+                font-size: 18px;
+                max-width: 80vw;
+                margin-top: 3vw;
+                line-height: 7vw;
+            }
+        }
+
+        & .button-calc-cost,
+        .button-application {
+            width: 14vw;
+            height: 3.5vw;
+            text-transform: uppercase;
+            font-family: 'FuturaDemiC', sans-serif;
+            font-size: 13px;
+            margin-right: 1vw;
+
+            @include xs {
+                width: 91vw;
+                height: 14vw;
+                margin-bottom: 7vw;
+            }
+        }
+    }
+
+    &--buttons {
+        margin-top: 3vw;
+
+        @include xs {
+            display: flex;
+            flex-direction: column;
+            margin-top: 8vw;
+        }
+    }
 }
+
+
 
 
 .btn-scroll {
     position: absolute;
-    background-color: yellow;
+    background-color: $bg-color-dark;
     margin-left: -5.6vw;
     margin-top: 3.3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 17vw;
     height: 7vw;
     z-index: 10;
+
+    & p {
+        padding-right: 1vw;
+        text-transform: uppercase;
+        font-family: 'Yeseva One', sans-serif;
+        font-size: 14px;
+        color: $color-white;
+    }
+
+    & p:hover {
+        color: $color-beige;
+    }
+
+
     @include xs {
             display: none;
     }

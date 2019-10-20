@@ -1,5 +1,5 @@
 .completed-projects {
-    background-color: teal;
+    background-color: $bg-color-dark;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,29 +28,146 @@
 
 .completed-projects--info--intro {
     margin-top: 5vw;
-    background-color: red;
     height: 15vw;
     width: 32vw;
+
+    &--header {
+        position: relative;
+        max-width: 20vw;
+        color: $color-beige;
+        text-transform: uppercase;
+        font-family: 'Yeseva One';
+        font-size: 27px;
+        line-height: 34px;
+        padding-left: 1vw;
+       
+        @include xs {
+            font-size: 22px;
+            max-width: 37vw;
+            padding: 0;
+            text-align: center;
+            margin-top: 9vw;
+             margin-bottom: 2vw;
+        }
+
+        &::after {
+            position: absolute;
+            top: 3.5vw;
+            left: 12vw;
+            content: '';
+            height: 1px;
+            width: 6.5vw;
+            border-bottom: 2px solid $color-beige;
+
+            @include xs {
+                display: none;
+            }
+        }
+    }
+
+    & p {
+        color: $color-white;
+        font-family: 'FuturaBookC';
+        font-size: 18px;
+        line-height: 30px;
+        padding-left: 1vw;
+        width: 30vw;
+
+        @include xs {
+            font-size: 14px;
+            width: 91vw;
+            line-height: 6vw;
+            text-align: center;
+        }
+    }
+
     @include xs {
         margin: 0;
         width: 100%;
         height: 67vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
 
 .completed-projects--info--details {
-    background-color: purple;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 1vw;
+
     @include xs {
         margin: 0;
         width: 100%;
         height: 67vw;
     }
+
+    &--item {
+        & p {
+            margin: 0;
+
+            &:first-child{
+                color: $color-beige;
+                font-family: 'Yeseva One';
+                font-size: 18px;
+                text-transform: uppercase;
+                line-height: 3vw;
+
+                @include xs {
+                    font-size: 14px;
+                    line-height: 12vw;
+                }
+            }
+
+            &:last-child {
+                color: $color-white;
+                font-family: 'FuturaBookC';
+                font-size: 15px;
+                line-height: 1vw;
+
+                @include xs {
+                    width: 24vw;
+                    font-size: 14px;
+                    line-height: 5vw;
+                }
+            }
+
+        }
+        
+    }
+
+    
 }
 
 .completed-projects--info--slider {
-    background-color: yellow;
     height: 4vw;
     width: 20vw;
+
+    & .arrow-left,
+    & .arrow-right {
+        color: white;
+        font-size: 30px;
+
+        &:hover {
+            color: $color-beige;
+        }
+    }
+
+    & .bullet{
+        display: inline-block;
+        margin: 0 0.7vw 0.1vw 0.7vw;
+        height: 0.7vw;
+        width: 0.7vw;
+        border-radius: 50%;
+        background-color: $color-white-30;
+
+        &:nth-child(2),
+        &:hover{
+        background-color: $color-white;
+    }
+    }
+
     @include xs {
         display: none;
     }
@@ -60,8 +177,8 @@
     display: flex;
     flex-direction: column;
     flex: 2;
-    background-color: blue;
     height: 100%;
+
     @include xs {
         height: 50vw;
         width: 100%;
@@ -69,17 +186,100 @@
 }
 
 .completed-projects--apts--h {
-    background-color: yellow;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     height: 9vw;
+
+    & a {
+        margin: 1.5vw 2vw 0 3vw;
+        padding-bottom: 0.3vw;
+        text-transform: uppercase;
+        color: $color-white-30;
+        font-family: 'Yeseva One';
+        font-size: 14px;
+
+        &:first-child,
+        &:hover {
+            color: $color-beige;
+            border-bottom: 2px solid $color-beige;
+        }
+    }
+
     @include xs {
         display: none;
     }
 }
 
 .completed-projects--apts--img {
-    background-color: green;
+    position: relative;
     height: 34vw;
+    width: 62vw;
+    max-width: 892px;
+    overflow: hidden;
     @include xs {
         height: 100%;
+        overflow: visible;
+    }
+
+    & .apt1 {
+        position: absolute;
+        left: 3vw;
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    & .apt2 {
+        position: absolute;
+        left: 52vw;
+            @include xs {
+            position: absolute;
+            left: 5vw;
+            height: 107%;
+            top: -7vw;
+        }
+    }
+
+
+    & .btn-right {
+        position: absolute;
+        z-index: 10;
+        top: 42%;
+        right: 5%;
+        width: 3.8vw;
+        height: 3.8vw;
+        border-radius: 50%;
+        background-color: $color-beige;
+
+        @include xs {
+            width: 10vw;
+            height: 10vw;
+            top: 39%;
+            left: 130%;
+        }
+
+        &:hover {
+            background-color: $color-white-30;
+        }
+
+        & .next{
+            position: absolute;
+            left: 28%;
+            top: 35%;
+            width: 1vw;
+            height: 1vw;
+            border-top: 2px solid $color-white;
+            border-right: 2px solid  $color-white;
+            transform: rotate(45deg);
+
+            @include xs {
+                width: 2vw;
+                height: 2vw;
+            }
+            
+        }
+
     }
 }
